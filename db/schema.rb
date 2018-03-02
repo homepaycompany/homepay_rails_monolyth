@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180302160748) do
+ActiveRecord::Schema.define(version: 20180302161648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "real_estate_properties", force: :cascade do |t|
+    t.string "address"
+    t.string "property_type"
+    t.integer "num_floor"
+    t.integer "num_room"
+    t.integer "num_bedroom"
+    t.integer "num_bathroom"
+    t.integer "size_carrez_sqm"
+    t.integer "size_total_sqm"
+    t.integer "size_garden_sqm"
+    t.integer "size_balcony_sqm"
+    t.integer "size_terrace_sqm"
+    t.integer "size_cellar_sqm"
+    t.integer "building_construction_year"
+    t.boolean "has_balcony"
+    t.boolean "has_garage"
+    t.boolean "has_terrace"
+    t.boolean "has_cellar"
+    t.boolean "has_parking"
+    t.boolean "has_elevator"
+    t.boolean "has_works_in_building_planned"
+    t.boolean "needs_renovation"
+    t.string "building_state"
+    t.string "property_state"
+    t.string "kitchen_state"
+    t.string "bathroom_state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_real_estate_properties_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +64,5 @@ ActiveRecord::Schema.define(version: 20180302160748) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "real_estate_properties", "users"
 end
