@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180302161648) do
+ActiveRecord::Schema.define(version: 20180302173601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "property_images", force: :cascade do |t|
+    t.string "photo"
+    t.string "name"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "real_estate_property_id"
+    t.index ["real_estate_property_id"], name: "index_property_images_on_real_estate_property_id"
+  end
 
   create_table "real_estate_properties", force: :cascade do |t|
     t.string "address"
@@ -64,5 +74,6 @@ ActiveRecord::Schema.define(version: 20180302161648) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "property_images", "real_estate_properties"
   add_foreign_key "real_estate_properties", "users"
 end
