@@ -1,0 +1,2 @@
+class PropertyForm < ApplicationRecord
+end
