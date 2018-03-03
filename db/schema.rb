@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303152301) do
+ActiveRecord::Schema.define(version: 20180303162034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20180303152301) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_property_forms_on_user_id"
   end
 
@@ -88,6 +90,8 @@ ActiveRecord::Schema.define(version: 20180303152301) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "property_form_id"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["property_form_id"], name: "index_real_estate_properties_on_property_form_id"
     t.index ["user_id"], name: "index_real_estate_properties_on_user_id"
   end
