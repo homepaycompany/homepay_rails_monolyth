@@ -1,0 +1,25 @@
+<div class="main-section">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="form-container">
+        <div class="form-title text-center">
+          <h1>Addresse du bien</h1>
+        </div>
+        <div id="map" style="width: 100%;height: 300px; margin-bottom: 20px" data-markers="<%= @marker.to_json %>">
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <div class="row">
+              <%= link_to property_form_path(@property_form), method: :delete do %>
+                <div class="col-xs-6 text-center btn">Retour</div>
+              <% end %>
+              <%= link_to property_form_description_1_path(@property_form) do %>
+                <div class="col-xs-6 text-center btn">Valider</div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

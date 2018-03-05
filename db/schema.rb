@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303162034) do
+ActiveRecord::Schema.define(version: 20180305134248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,12 +18,11 @@ ActiveRecord::Schema.define(version: 20180303162034) do
   create_table "property_forms", force: :cascade do |t|
     t.string "address"
     t.string "property_type"
-    t.integer "num_floor"
-    t.integer "num_room"
-    t.integer "num_bedroom"
-    t.integer "num_bathroom"
-    t.integer "size_carrez_sqm"
-    t.integer "size_total_sqm"
+    t.integer "num_floors"
+    t.integer "num_rooms"
+    t.integer "num_bedrooms"
+    t.integer "num_bathrooms"
+    t.integer "property_total_size_sqm"
     t.integer "size_garden_sqm"
     t.integer "size_balcony_sqm"
     t.integer "size_terrace_sqm"
@@ -36,7 +35,6 @@ ActiveRecord::Schema.define(version: 20180303162034) do
     t.boolean "has_parking"
     t.boolean "has_elevator"
     t.boolean "has_works_in_building_planned"
-    t.boolean "needs_renovation"
     t.string "building_state"
     t.string "property_state"
     t.string "kitchen_state"
@@ -47,6 +45,12 @@ ActiveRecord::Schema.define(version: 20180303162034) do
     t.bigint "user_id"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "has_pool"
+    t.boolean "has_attic"
+    t.boolean "is_attic_convertible"
+    t.integer "appartment_floor"
+    t.integer "livable_size_sqm"
+    t.integer "ground_floor_size_sqm"
     t.index ["user_id"], name: "index_property_forms_on_user_id"
   end
 
@@ -63,12 +67,11 @@ ActiveRecord::Schema.define(version: 20180303162034) do
   create_table "real_estate_properties", force: :cascade do |t|
     t.string "address"
     t.string "property_type"
-    t.integer "num_floor"
-    t.integer "num_room"
-    t.integer "num_bedroom"
-    t.integer "num_bathroom"
-    t.integer "size_carrez_sqm"
-    t.integer "size_total_sqm"
+    t.integer "num_floors"
+    t.integer "num_rooms"
+    t.integer "num_bedrooms"
+    t.integer "num_bathrooms"
+    t.integer "property_total_size_sqm"
     t.integer "size_garden_sqm"
     t.integer "size_balcony_sqm"
     t.integer "size_terrace_sqm"
@@ -81,7 +84,6 @@ ActiveRecord::Schema.define(version: 20180303162034) do
     t.boolean "has_parking"
     t.boolean "has_elevator"
     t.boolean "has_works_in_building_planned"
-    t.boolean "needs_renovation"
     t.string "building_state"
     t.string "property_state"
     t.string "kitchen_state"
@@ -92,6 +94,12 @@ ActiveRecord::Schema.define(version: 20180303162034) do
     t.bigint "property_form_id"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "has_pool"
+    t.boolean "has_attic"
+    t.boolean "is_attic_convertible"
+    t.integer "appartment_floor"
+    t.integer "livable_size_sqm"
+    t.integer "ground_floor_size_sqm"
     t.index ["property_form_id"], name: "index_real_estate_properties_on_property_form_id"
     t.index ["user_id"], name: "index_real_estate_properties_on_user_id"
   end
