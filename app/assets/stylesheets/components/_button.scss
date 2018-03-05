@@ -1,0 +1,30 @@
+.btn {
+  color: white;
+  background: $blue;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: $dark-blue;
+  text-decoration: none;
+  color: white;
+}
+
+.white-btn {
+  color: $green;
+  background: white;
+  font-size: 14px;
+  border: solid 1px white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.white-btn:hover {
+  text-decoration: none;
+  color: $green;
+  border: solid 1px $green;
+}
