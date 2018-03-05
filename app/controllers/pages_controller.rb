@@ -4,4 +4,12 @@ class PagesController < ApplicationController
   def home
     @property_form = PropertyForm.new
   end
+
+  def landing_liquidity
+    @property_form = PropertyForm.new
+  end
+
+  def landing_transparency
+    @property_form = PropertyForm.new
+  end
 end

@@ -1,0 +1,20 @@
+<div class="main-section">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(218, 241, 255, 0.2) 0%, rgba(184, 189, 214, 0.2) 50%), url('<%= image_url("banner_image.jpg") %>'); background-size: cover; background-position: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <div class="banner-content">
+            <div>
+              <h1>Vendez votre logement en quelques minutes</h1>
+              <%= simple_form_for(@property_form) do |f| %>
+                <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input" } %>
+                <%= f.submit "Demandez votre offre d'achat", class: "form-submit" %>
+              <% end %>
+              <p>Demandez une offre d'achat pour votre logement et <br>épargnez vous les désagréments liés à la mise en vente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
