@@ -30,13 +30,13 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 hidden" id="js-property_form_size_terrace_sqm">
+      <div class="col-xs-12 hidden" id="js-property_form_size_terrace_sqm">
         <div class="form-field form-field-toggle">
           <span style="margin-right: 10px;">Surface</span>
           <div>
             <div class="form-input">
               <%= simple_form_for(@property_form, remote: true) do |f| %>
-                <%= f.input :size_terrace_sqm, label: false,  placeholder: (@property_form.size_terrace_sqm || "m2") %>
+                <%= f.input :size_terrace_sqm, label: false,  placeholder: (@property_form.size_terrace_sqm || "m2"), input_html: {class:'hidden'} %>
                 <%= f.submit class:"hidden form-field-submit-button" %>
               <% end %>
             </div>
@@ -62,13 +62,13 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 hidden" id="js-property_form_size_terrace_sqm">
+      <div class="col-xs-12 hidden" id="js-property_form_size_cellar_sqm">
         <div class="form-field form-field-toggle">
           <span style="margin-right: 10px;">Surface</span>
           <div>
             <div class="form-input">
               <%= simple_form_for(@property_form, remote: true) do |f| %>
-                <%= f.input :size_cellar_sqm, label: false,  placeholder: (@property_form.size_cellar_sqm || "m2") %>
+                <%= f.input :size_cellar_sqm, label: false,  placeholder: (@property_form.size_cellar_sqm || "m2"), input_html: {class:'hidden'} %>
                 <%= f.submit class:"hidden form-field-submit-button" %>
               <% end %>
             </div>

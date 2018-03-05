@@ -16,7 +16,7 @@ function validateFields() {
   })
   let i = true
   document.querySelectorAll('.form-control').forEach((f) => {
-    if (f.type === 'number' && parseInt(f.value, 10)) {
+    if (f.type === 'number' && parseInt(f.value, 10) || f.classList.contains('hidden')) {
       i = i && true
     } else {
       f.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML('beforeEnd', "<div class='form-wrong-input-format'>Format incorrect<div>")
