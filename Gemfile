@@ -17,6 +17,13 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# Property image management cloud
+gem 'cloudinary'
+# Property image mounter
+gem 'carrierwave', '~> 1.2'
+# Geocoding property addresses with google geocoding API
+gem 'geocoder'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
