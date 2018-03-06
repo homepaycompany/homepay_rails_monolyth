@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get "landing" => 'pages#landing_liquidity'
   get "home" => 'pages#landing_transparency'
   get "about" => 'pages#about_us'
-  get "how-to" => 'pages#how_to'
 
   resources :property_forms, only: [:new, :show] do
     put "description_1" => 'property_forms#description_1'
