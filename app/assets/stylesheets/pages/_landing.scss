@@ -1,4 +1,4 @@
-.value-prop {
+.landing-prop {
   background: white;
   padding: 40px 0px;
   .container {
@@ -17,7 +17,98 @@
   img {
     max-height: 50px;
   }
-  .value-prop-item {
+  .landing-prop-item {
     animation-duration: 5s;
   }
 }
+
+.landing-steps {
+  background-color: #F5FBFF;
+  padding: 40px 0px;
+  .container {
+    width: 60%;
+  }
+  .landing-steps-title h2 {
+    color: $blue;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 0px;
+  }
+  .landing-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:nth-child(3) {
+      flex-direction: row-reverse;
+      .feature-container {
+        margin-left: 40px;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      &:nth-child(3) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  .landing-step-card {
+    margin: 50px 0px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 40px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+    min-height: 250px;
+    width: 400px;
+    h4 {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0px;
+      font-size: 18px;
+      color: white;
+      background: $blue;
+      font-weight: 800;
+      border-radius: 50%;
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 800;
+      color: $black;
+    }
+    p {
+      margin-top: 20px;
+      color: $light-black;
+      font-size: 16px;
+    }
+    a {
+      margin-top: 20px;
+      text-decoration: none;
+      color: $blue;
+      font-weight: 800;
+      font-size: 14px;
+    }
+  }
+  .landing-step-img {
+    img {
+      max-height: 250px;
+      max-width: 250px;
+    }
+  }
+}
+
+.landing-advantages {
+  background-color: white;
+  padding: 40px 0px;
+  h2 {
+    color: $blue;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 0px;
+  }
+  img {
+    max-height: 450px;
+  }
+}
+
+

@@ -12,4 +12,7 @@ class PagesController < ApplicationController
   def landing_transparency
     @property_form = PropertyForm.new
   end
+
+  def how_to
+  end
 end
