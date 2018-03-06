@@ -79,13 +79,13 @@
       max-width: 280px;
     }
   }
-  #landing-second-step .landing-step-img:before, #landing-third-step .landing-step-img:before {
+  #landing-first-step .landing-step-img:before, #landing-second-step .landing-step-img:before {
     content: "";
     background-color: $blue;
     position: absolute;
     width: 2px;
     height: 100px;
-    top: -50px;
+    bottom: -50px;
     left: 50%;
     display: block;
   }
