@@ -58,7 +58,7 @@
         </div>
 
         <div class="col-xs-12">
-          <div class="landing-step">
+          <div class="landing-step" id="landing-first-step">
             <div class="col-xs-12 col-sm-6 col-sm-offset-1">
               <div class="landing-step-card">
                 <h4 class="text-center">1</h4>
@@ -68,7 +68,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-4">
-              <div class="landing-step-img">
+              <div class="landing-step-img text-center">
                 <%= image_tag 'step_1.png' %>
               </div>
             </div>
@@ -76,33 +76,35 @@
         </div>
 
         <div class="col-xs-12">
-          <div class="landing-step">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+          <div class="landing-step" id="landing-second-step">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+              <div class="landing-step-img text-center">
+                <%= image_tag 'step_2.png' %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
               <div class="landing-step-card">
                 <h4 class="text-center">2</h4>
                 <h3>Recevez des offres</h3>
-                <p>Les offres d'achat arrivent en seulement quelques jours.</p>
+                <p>Les acquéreurs présélectionnés professionnels vous formulerons une offre d'achat en seulement quelques jours.</p>
                 <%= link_to "Commencez", new_property_form_path %> | <%= link_to "En savoir plus", how_to_path %>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-              <div class="landing-step-img">
-                <%= image_tag 'step_2.png' %>
               </div>
             </div>
           </div>
         </div>
 
         <div class="col-xs-12">
-          <div class="landing-step">
+          <div class="landing-step" id="landing-third-step">
             <div class="col-xs-12 col-sm-6 col-sm-offset-1">
               <div class="landing-step-card">
                 <h4 class="text-center">3</h4>
-                <h3>Choisissez une des offres et organisez une visite confirmatoire en fonction de vos disponibilités</h3>
+                <h3>Choisissez la meilleure option pour vous</h3>
+                <p>Vous pouvez choisir une des offres qui vous a été formulées et organiser une visite confirmatoire en fonction de vos disponibilités. Vous n'avez aucune obligation.</p>
+                <%= link_to "Commencez", new_property_form_path %> | <%= link_to "En savoir plus", how_to_path %>
               </div>
             </div>
             <div class="col-xs-12 col-sm-4">
-              <div class="landing-step-img">
+              <div class="landing-step-img text-center">
                 <%= image_tag 'step_3.png' %>
               </div>
             </div>
