@@ -12,7 +12,6 @@
   text-decoration: none;
   color: white;
 }
-
 .white-btn {
   color: $green;
   background: white;
@@ -27,4 +26,28 @@
   text-decoration: none;
   color: $green;
   border: solid 1px $green;
+}
+.toggle-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: white;
+  &.active {
+    background-color: $blue;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.toggle-btn-border {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  border: 2px solid $blue;
 }
