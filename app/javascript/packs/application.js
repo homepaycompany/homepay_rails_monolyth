@@ -8,7 +8,6 @@ import { addStateToForm } from '../components/formCheckStateBox'
 import { waypoint } from '../shared/landing_page.js'
 
 // Javascript for autocomplete
-import { autocomplete } from '../components/autocomplete'
 if (document.getElementById('real_estate_property_address')) {
   autocomplete();
 }
@@ -32,7 +31,7 @@ if (document.getElementById('js-form-toggle-btn')) {
 if (document.getElementById('js-form-state-box')) {
   addStateToForm();
 }
-  
+
 // Javascript for landing page
 if (document.getElementById('js-value-prop-sale')) {
   waypoint();
