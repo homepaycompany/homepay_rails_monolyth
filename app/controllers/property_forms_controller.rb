@@ -1,5 +1,16 @@
 class PropertyFormsController < ApplicationController
-  before_action :set_property_form, only: [:show, :update, :destroy, :address_validation, :description_1, :description_2, :description_3]
+  before_action :set_property_form,
+  only: [:show,
+    :update,
+    :destroy,
+    :a_address_validation,
+    :b_property_type_selection,
+    :c_description_1,
+    :d_description_2,
+    :e_description_3,
+    :f_personnal_information,
+    :g_confirmation,
+    :h_validation]
 
   # CRUD ACTIONS
 
@@ -27,16 +38,17 @@ class PropertyFormsController < ApplicationController
 
   # FORM SPECIFIC ACTIONS
 
-  def address_validation
+  def a_address_validation
     @marker = { lat: @property_form.latitude, lng: @property_form.longitude }
   end
 
-  def description_1
+  def b_property_type_selection
   end
 
-  def description_2
+  def c_description_1
     if params[:property_type]
       unless @property_form.update(property_type: params[:property_type])
+        lash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
         redirect_to root_path
       end
     else
@@ -44,7 +56,39 @@ class PropertyFormsController < ApplicationController
     end
   end
 
-  def description_3
+  def d_description_2
+  end
+
+  def e_description_3
+  end
+
+  def f_personnal_information
+  end
+
+  def g_confirmation
+    if User.find_by(email: @property_form.email)
+      user = User.find_by(email: @property_form.email)
+    else
+      user = User.create_instance_from_property_form(@property_form)
+      unless user.save
+        flash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
+        redirect_to root_path
+      end
+    end
+    unless @property_form.update(user_id: user.id)
+      lash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
+      redirect_to root_path
+    end
+    @marker = { lat: @property_form.latitude, lng: @property_form.longitude }
+  end
+
+  def h_validation
+    if @property_form.update(complete: true)
+      unless RealEstateProperty.create(@property_form.attributes.except('complete'))
+        flash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
+        redirect_to root_path
+      end
+    end
   end
 
   private
@@ -86,6 +130,11 @@ class PropertyFormsController < ApplicationController
     :size_cellar_sqm,
     :size_balcony_sqm,
     :size_terrace_sqm,
-    :is_attic_convertible)
+    :is_attic_convertible,
+    :first_name,
+    :last_name,
+    :email,
+    :phone_number,
+    :time_to_sell)
   end
 end

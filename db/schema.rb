@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305134248) do
+ActiveRecord::Schema.define(version: 20180306202108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20180305134248) do
     t.integer "num_bedrooms"
     t.integer "num_bathrooms"
     t.integer "property_total_size_sqm"
-    t.integer "size_garden_sqm"
     t.integer "size_balcony_sqm"
     t.integer "size_terrace_sqm"
     t.integer "size_cellar_sqm"
@@ -51,6 +50,11 @@ ActiveRecord::Schema.define(version: 20180305134248) do
     t.integer "appartment_floor"
     t.integer "livable_size_sqm"
     t.integer "ground_floor_size_sqm"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
+    t.string "time_to_sell"
     t.index ["user_id"], name: "index_property_forms_on_user_id"
   end
 
@@ -72,7 +76,6 @@ ActiveRecord::Schema.define(version: 20180305134248) do
     t.integer "num_bedrooms"
     t.integer "num_bathrooms"
     t.integer "property_total_size_sqm"
-    t.integer "size_garden_sqm"
     t.integer "size_balcony_sqm"
     t.integer "size_terrace_sqm"
     t.integer "size_cellar_sqm"
@@ -100,6 +103,11 @@ ActiveRecord::Schema.define(version: 20180305134248) do
     t.integer "appartment_floor"
     t.integer "livable_size_sqm"
     t.integer "ground_floor_size_sqm"
+    t.string "time_to_sell"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
     t.index ["property_form_id"], name: "index_real_estate_properties_on_property_form_id"
     t.index ["user_id"], name: "index_real_estate_properties_on_user_id"
   end

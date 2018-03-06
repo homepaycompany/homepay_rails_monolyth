@@ -1,0 +1,18 @@
+<div class="form-field">
+  <%= t[:desc] %>
+  <div class="form-state-values-box" id="js-form-state-values-box">
+    <% t[:values].each do |v| %>
+      <div class="form-state-box"
+        id="js-form-state-box"
+        data-name="<%= t[:name] %>"
+        data-value="<%= v %>"
+        data-selected="<%= @property_form.send(t[:name]) == v %>">
+        <%= v %>
+      </div>
+    <% end %>
+  </div>
+  <%= simple_form_for(@property_form, remote: true) do |f| %>
+    <div class="div" id=<%= "js-hidden-form-#{t[:name]}" %>></div>
+    <%= f.submit class:"hidden form-field-submit-button"%>
+  <% end %>
+</div>

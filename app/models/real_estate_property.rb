@@ -11,12 +11,11 @@ class RealEstateProperty < ApplicationRecord
   :has_cellar,
   :property_state,
   :kitchen_state,
+  :building_construction_year,
   :bathroom_state, presence: true
-  validates :appartment_size_sqm,
-  :appartment_floor,
+  validates :appartment_floor,
   :building_state,
   :has_works_in_building_planned,
-  :building_construction_year,
   :has_elevator,
   :has_parking,
   :has_balcony, presence: true, if: :is_appartment?

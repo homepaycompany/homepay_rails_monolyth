@@ -16,10 +16,21 @@ function validateFields() {
   })
   let i = true
   document.querySelectorAll('.form-control').forEach((f) => {
-    if (f.type === 'number' && parseInt(f.value, 10) || f.classList.contains('hidden')) {
+    if (f.type === 'number' && parseInt(f.value, 10)) {
+      i = i && true
+    } else if (f.type === 'text' && typeof f.value === 'string' && f.value !== '') {
+      i = i && true
+      f.value = f.value.toLowerCase()
+    } else if (f.type === 'email' && f.value.match(/^[^@\s]+@[^@\s]+$/)) {
+      i = i && true
+      f.value = f.value.toLowerCase()
+    } else if (f.type === 'tel' && f.value.match(/(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}/)) {
+      i = i && true
+      f.value = f.value.toLowerCase()
+    } else if (f.classList.contains('hidden')) {
       i = i && true
     } else {
-      f.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML('beforeEnd', "<div class='form-wrong-input-format'>Format incorrect<div>")
+      f.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML('beforeEnd', `<div class='form-wrong-input-format'>${f.type} incorrect<div>`)
       i = i && false
     }
   })

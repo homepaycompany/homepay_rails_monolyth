@@ -1,0 +1,26 @@
+<div class="main-section">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="form-container">
+        <div class="form-title text-center">
+          <h1>Description générale du bien (1/4)</h1>
+        </div>
+        <div class="form-body">
+          <%= render 'property_forms/form_sections/form_section_dispatch', page: @property_form.dsc_1_fields %>
+        </div>
+        <div class="form-validation">
+          <div class="btn form-button" id="go-back">
+            Retour
+          </div>
+          <div class="btn form-button" id="validate-section">
+            Valider
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to property_form_description_2_path(@property_form), method: :get do %>
+  <div class="btn hidden" id="move-to-next-section"></div>
+<% end %>

@@ -3,14 +3,10 @@
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <div class="form-container">
         <div class="form-title text-center">
-          <h1>Description générale du bien (2/4)</h1>
+          <h1>Addresse du bien</h1>
         </div>
         <div class="form-body">
-          <% if @property_form.property_type == 'appartment' %>
-            <%= render 'description_3_appartment' %>
-          <% else %>
-            <%= render 'description_3_house' %>
-          <% end %>
+          <div id="map" style="width: 100%;height: 300px; margin-bottom: 20px" data-markers="<%= @marker.to_json %>"></div>
         </div>
         <div class="form-validation">
           <div class="btn form-button" id="go-back">
@@ -25,6 +21,6 @@
   </div>
 </div>
 
-<%= link_to property_form_description_3_path(@property_form), method: :get do %>
+<%= link_to property_form_property_type_path(@property_form), method: :get do %>
   <div class="btn hidden" id="move-to-next-section"></div>
 <% end %>
