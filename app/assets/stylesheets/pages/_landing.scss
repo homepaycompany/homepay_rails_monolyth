@@ -92,72 +92,19 @@
   }
 }
 
+
 .landing-advantages {
   background-color: white;
   padding: 40px 0px;
-  .container {
-    width: 60%;
-  }
   h2 {
     color: $blue;
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 22px;
+    font-weight: 600;
     margin-top: 0px;
   }
-  h3 {
-    color: $black;
-    font-size: 18px;
-    font-weight: 800;
-    margin: 20px 0px 30px 20px;
-  }
   img {
-    max-width: 120px;
-    margin: 20px 0px 30px 30px;
-  }
-  ul {
-    list-style: none;
-    text-align: left;
-  }
-  li {
-    margin-bottom: 10px;
-  }
-  i {
-    color: $blue;
-    font-size: 14px;
-    margin-right: 10px;
-  }
-  .fa-minus-circle {
-    color: $gray;
+    max-height: 450px;
   }
 }
 
 
-.landing-contact {
-  background-color: #F5FBFF;
-  padding: 40px 0px;
-  .container {
-    width: 60%;
-  }
-  h2 {
-    color: $blue;
-    font-size: 26px;
-    font-weight: 800;
-    margin-top: 0px;
-  }
-  p {
-    color: $light-black;
-    font-size: 16px;
-  }
-  a {
-    margin-top: 20px;
-    text-decoration: none;
-    color: $blue;
-    font-weight: 800;
-    font-size: 14px;
-  }
-  img {
-    margin: 10px 0px;
-    width: 120px;
-    height: 120px;
-  }
-}
