@@ -69,7 +69,7 @@ class RealEstateProperty < ApplicationRecord
   # the next steps in the process
 
   def send_confirmation_email
-    UserMailer.confirm_form(self.user_id, self).deliver_now
+    UserMailer.confirm_form(self.user_id, self).deliver_later
   end
 
 
