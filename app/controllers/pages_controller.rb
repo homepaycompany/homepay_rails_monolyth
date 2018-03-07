@@ -9,10 +9,9 @@ class PagesController < ApplicationController
     @property_form = PropertyForm.new
   end
 
-  def landing_transparency
-    @property_form = PropertyForm.new
+  def how_it_works
   end
 
-  def how_to
+  def about_us
   end
 end

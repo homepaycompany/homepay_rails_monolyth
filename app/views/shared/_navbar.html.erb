@@ -9,8 +9,8 @@
   <!-- Right Navigation -->
   <div class="navbar-right hidden-xs hidden-sm">
     <%= link_to "A propos", about_path, class: "navbar-item navbar-link #{active_class(about_path)}" %>
-    <%= link_to "Comment ça marche", "javascript:void(0)", class: "navbar-item navbar-link" %>
-    <%= link_to "Vendre mon bien immobilier", "javascript:void(0)", class: "btn" %>
+    <%= link_to "Comment ça marche", how_it_works_path, class: "navbar-item navbar-link #{active_class(how_it_works_path)}" %>
+    <%= link_to "Vendre mon bien immobilier", new_property_form_path, class: "btn" %>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
