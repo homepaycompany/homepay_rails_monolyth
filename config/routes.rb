@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  get "landing" => 'pages#landing_liquidity'
-  get "home" => 'pages#landing_transparency'
+  get "home" => 'pages#landing_liquidity'
   get "about" => 'pages#about_us'
-  get "how-to" => 'pages#how_to'
+  get "how-it-works" => 'pages#how_it_works'
 
   resources :property_forms, only: [:show, :new, :create, :update, :destroy] do
     get "address" => 'property_forms#a_address_validation'
