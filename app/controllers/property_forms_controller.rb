@@ -94,7 +94,6 @@ class PropertyFormsController < ApplicationController
       end
       property = RealEstateProperty.new(property_attributes.except('complete'))
       property.property_form = @property_form
-      binding.pry
       unless property.save
         flash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
         redirect_to root_path
