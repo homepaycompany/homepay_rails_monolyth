@@ -27,8 +27,8 @@
       margin: 20px 0px;
     }
     img {
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
     }
     .crucial-step {
       font-weight: 800;
@@ -58,7 +58,7 @@
         border-radius: 50%;
         background-color: $grey;
         position: absolute;
-        top: 110px;
+        top: 120px;
         left: calc(50% - 4px);
         z-index: 1;
       }
@@ -94,7 +94,7 @@
       &:after {
         content: "";
         position: absolute;
-        top: 114px;
+        top: 124px;
         right: 0;
         width: 60px;
         height: 2px;
@@ -107,7 +107,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 114px;
+        top: 124px;
         left: 0;
         width: 60px;
         height: 2px;
