@@ -6,10 +6,12 @@
           <div class="banner-content">
             <div>
               <h1>Vendez votre logement en quelques minutes</h1>
-              <%= simple_form_for(@property_form) do |f| %>
-                <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input", placeholder: "Indiquez l'adresse de votre bien" } %>
-                <%= f.submit "Demandez votre offre d'achat", class: "form-submit" %>
-              <% end %>
+              <div class="address-input-form">
+                <%= simple_form_for(@property_form) do |f| %>
+                  <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input", placeholder: "Indiquez l'adresse de votre bien" } %>
+                  <%= f.submit "Demandez votre offre d'achat", class: "form-submit" %>
+                <% end %>
+              </div>
               <p>Demandez une offre d'achat pour votre logement et <br>épargnez vous les désagréments liés à la mise en vente.</p>
             </div>
           </div>
@@ -64,7 +66,7 @@
                 <h4 class="text-center">1</h4>
                 <h3>Décrivez votre bien</h3>
                 <p>Répondez à quelques questions et envoyez-nous quelques photos. Nous les enverrons à des acquéreurs présélectionnés.</p>
-                | <%= link_to "En savoir plus", how_to_path %>
+                <%= link_to "Commencez", new_property_form_path %> | <%= link_to "En savoir plus", how_to_path %>
               </div>
             </div>
             <div class="col-xs-12 col-sm-4">
@@ -87,7 +89,7 @@
                 <h4 class="text-center">2</h4>
                 <h3>Recevez des offres</h3>
                 <p>Les acquéreurs présélectionnés professionnels vous formulerons une offre d'achat en seulement quelques jours.</p>
-                | <%= link_to "En savoir plus", how_to_path %>
+                <%= link_to "Commencez", new_property_form_path %> | <%= link_to "En savoir plus", how_to_path %>
               </div>
             </div>
           </div>
@@ -100,7 +102,7 @@
                 <h4 class="text-center">3</h4>
                 <h3>Choisissez la meilleure option pour vous</h3>
                 <p>Vous pouvez choisir une des offres qui vous a été formulées et organiser une visite confirmatoire en fonction de vos disponibilités. Vous n'avez aucune obligation.</p>
-                | <%= link_to "En savoir plus", how_to_path %>
+                <%= link_to "Commencez", new_property_form_path %> | <%= link_to "En savoir plus", how_to_path %>
               </div>
             </div>
             <div class="col-xs-12 col-sm-4">

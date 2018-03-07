@@ -1,21 +1,16 @@
 <div class="main-section">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <%= render 'property_forms/progress_bar/progress_bar', section: 1, name: 'Addresse'  %>
       <div class="form-container">
         <div class="form-title text-center">
-          <h1>Addresse du bien</h1>
+          <h1>Confirmez l'addresse de votre bien</h1>
         </div>
         <div class="form-body">
           <div id="map" style="width: 100%;height: 300px; margin-bottom: 20px" data-markers="<%= @marker.to_json %>"></div>
         </div>
-        <div class="form-validation">
-          <div class="btn form-button" id="go-back">
-            Retour
-          </div>
-          <div class="btn form-button" id="validate-section">
-            Valider
-          </div>
-        </div>
+        <%= render 'property_forms/form_validation/form_validation', next_p: 'Valider', previous_p: 'Suivant' %>
+      </div>
       </div>
     </div>
   </div>

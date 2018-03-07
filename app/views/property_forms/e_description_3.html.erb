@@ -1,6 +1,7 @@
 <div class="main-section">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <%= render 'property_forms/progress_bar/progress_bar', section: 5, name: 'Description (3/3)' %>
       <div class="form-container">
         <div class="form-title text-center">
           <h1>Description générale du bien (3/4)</h1>
@@ -8,14 +9,7 @@
         <div class="form-body">
           <%= render 'property_forms/form_sections/form_section_dispatch', page: @property_form.dsc_3_fields %>
         </div>
-        <div class="form-validation">
-          <div class="btn form-button" id="go-back">
-            Retour
-          </div>
-          <div class="btn form-button" id="validate-section">
-            Valider
-          </div>
-        </div>
+        <%= render 'property_forms/form_validation/form_validation', next_p: 'Valider', previous_p: 'Retour' %>
       </div>
     </div>
   </div>
