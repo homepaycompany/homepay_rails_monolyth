@@ -31,9 +31,9 @@ function formRevealElements (b) {
     const s = document.getElementById(b.dataset.reveal)
     s.classList.toggle('hidden');
     if (s.querySelector('.form-control')) {
-      s.querySelector('.form-control').classList.toggle('hidden')
-      s.querySelector('.form-control').classList.toggle('js-no-validate')
-      s.querySelector('.form-field-submit-button').classList.toggle('js-no-validate')
+      s.querySelector('.form-control').classList.toggle('hidden');
+      s.querySelector('.form-control').classList.toggle('js-no-validate');
+      s.querySelector('.form-field-submit-button').classList.toggle('js-no-validate');
     }
   }
 }
