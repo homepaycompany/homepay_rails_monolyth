@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'arthur@homepay.com'
+  default from: 'arthur@homepay.fr'
   layout 'mailer'
 end
