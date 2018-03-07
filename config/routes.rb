@@ -16,5 +16,12 @@ Rails.application.routes.draw do
     get "confirmation" => 'property_forms#g_confirmation'
     get "validation" => 'property_forms#h_validation'
   end
+
+  # Sidekiq Web UI, only for admins.
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
