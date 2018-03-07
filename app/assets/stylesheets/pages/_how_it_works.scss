@@ -24,21 +24,21 @@
     color: $light-black;
     font-size: 16px;
     .crucial-step {
-      color: $blue;
       font-weight: 800;
       font-size: 18px;
-      height: 100px;
+      height: 80px;
+      p {
+        color: $blue;
+      }
       &:before {
         content: '';
-        width: 15px;
-        height: 15px;
-        border-radius: 7.5px;
-        -moz-border-radius: 7.5px;
-        -webkit-border-radius: 7.5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
         background-color: $blue;
         position: absolute;
-        top: 0px;
-        left: calc(50% - 7.5px);
+        top: 43px;
+        left: calc(50% - 4px);
         z-index: 1;
       }
     }
@@ -46,15 +46,13 @@
       height: 250px;
       &:before {
         content: '';
-        width: 15px;
-        height: 15px;
-        border-radius: 7.5px;
-        -moz-border-radius: 7.5px;
-        -webkit-border-radius: 7.5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
         background-color: $grey;
         position: absolute;
         top: 0px;
-        left: calc(50% - 7.5px);
+        left: calc(50% - 4px);
         z-index: 1;
       }
     }
@@ -69,6 +67,50 @@
         left: 50%;
         display: block;
       }
+    }
+    .crucial-step-container {
+      padding-right: 80px;
+      text-align: left;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 46px;
+        right: 0;
+        width: 60px;
+        height: 2px;
+        background: $blue;
+      }
+    }
+    .step-container {
+      padding-left: 80px;
+      text-align: left;
+      // &:before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 4px;
+      //   left: 0;
+      //   width: 60px;
+      //   height: 2px;
+      //   background: $light-grey;
+      // }
+    }
+    .row > .col-xs-12:nth-child(odd) > .timeline-step > .step-container:after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 0;
+      width: 60px;
+      height: 2px;
+      background: $light-grey;
+    }
+    .row > .col-xs-12:nth-child(even) > .timeline-step > .step-container:before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: $light-grey;
     }
   }
   .form {
