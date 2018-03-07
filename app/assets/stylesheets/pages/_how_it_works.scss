@@ -1,0 +1,77 @@
+.how-it-works-section {
+  padding: 40px 0px;
+  margin: 40px 0px;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  .container {
+    width: 80%;
+  }
+  h2 {
+    color: $blue;
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 0px;
+  }
+  p {
+    margin: 40px 0px;
+    color: $light-black;
+    font-size: 16px;
+  }
+  ul {
+    list-style: none;
+    color: $light-black;
+    font-size: 16px;
+    .crucial-step {
+      color: $blue;
+      font-weight: 800;
+      font-size: 18px;
+      height: 100px;
+      &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        -moz-border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        background-color: $blue;
+        position: absolute;
+        top: 0px;
+        left: calc(50% - 7.5px);
+        z-index: 1;
+      }
+    }
+    .regular-step {
+      height: 250px;
+      &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        -moz-border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        background-color: $grey;
+        position: absolute;
+        top: 0px;
+        left: calc(50% - 7.5px);
+        z-index: 1;
+      }
+    }
+    .timeline-step {
+      &:after {
+        content: "";
+        background-color: $light-grey;
+        position: absolute;
+        width: 1px;
+        height: 300px;
+        top: 0px;
+        left: 50%;
+        display: block;
+      }
+    }
+  }
+  .form {
+    margin-top: 80px;
+  }
+}

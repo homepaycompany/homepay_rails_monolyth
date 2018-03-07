@@ -1,3 +1,67 @@
-<div class="main-section">
+<div class="main-section text-center">
+  <div class="container">
+    <div class="how-it-works-section">
+      <div class="container">
+        <h2>Vendre son bien immobilier avec Homepay</h2>
+        <p>Acheter et vendre une maison est marque le début d'un nouveau chapitre de vie. Nous pensons que vendre un bien immobilier devrait être simple et transparent. Nous travaillons avec les propriétaires pour leur apporter une expérience profondément simplifiée, apportant de la confiance et de la transparence à chaque étape de la vente d'un bien immobilier. Nous épargnons aux vendeurs les désagréments et les mois de stress liés à la mise en vente d'un bien immobilier.</p>
+        <ul class="timeline">
+          <div class="row">
+            <div class="col-xs-12">
+              <li class="timeline-step crucial-step">
+                <div class="col-xs-12 col-sm-6">
+                  Vous demandez une offre.
+                </div>
+              </li>
+            </div>
+            <div class="col-xs-12">
+              <li class="timeline-step regular-step">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                  Nos investisseurs partenaires préparent une offre ferme d'achat basée sur les données de marché et les informations que vous nous avez communiquées sur votre bien.
+                </div>
+              </li>
+            </div>
 
+            <div class="col-xs-12">
+              <li class="timeline-step regular-step">
+                <div class="col-xs-12 col-sm-6">
+                  Vous examinez votre offre.
+                </div>
+              </li>
+            </div>
+            <div class="col-xs-12">
+              <li class="timeline-step regular-step">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                  Vous examinez votre offre.
+                </div>
+              </li>
+            </div>
+            <div class="col-xs-12">
+              <li class="timeline-step regular-step">
+                <div class="col-xs-12 col-sm-6">
+                  Vous examinez votre offre.
+                </div>
+              </li>
+            </div>
+
+            <div class="col-xs-12">
+              <li class="timeline-step regular-step">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                  Vous examinez votre offre.
+                </div>
+              </li>
+            </div>
+          </div>
+        </ul>
+        <div class="form">
+          <h2>Vendez votre logement en un clic</h2>
+          <div class="address-input-form">
+            <%= simple_form_for(@property_form) do |f| %>
+              <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input", placeholder: "Indiquez l'adresse de votre bien" } %>
+              <%= f.submit "Demandez votre offre d'achat", class: "form-submit" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
