@@ -69,8 +69,8 @@
       }
     }
     .crucial-step-container {
+      text-align: right;
       padding-right: 80px;
-      text-align: left;
       &:before {
         content: "";
         position: absolute;
@@ -81,39 +81,37 @@
         background: $blue;
       }
     }
-    .step-container {
+    .row > .col-xs-12:nth-child(odd) > .timeline-step > .step-container {
+      padding-right: 80px;
+      text-align: right;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 60px;
+        height: 2px;
+        background: $light-grey;
+      }
+    }
+    .row > .col-xs-12:nth-child(even) > .timeline-step > .step-container {
       padding-left: 80px;
       text-align: left;
-      // &:before {
-      //   content: "";
-      //   position: absolute;
-      //   top: 4px;
-      //   left: 0;
-      //   width: 60px;
-      //   height: 2px;
-      //   background: $light-grey;
-      // }
-    }
-    .row > .col-xs-12:nth-child(odd) > .timeline-step > .step-container:after {
-      content: "";
-      position: absolute;
-      top: 4px;
-      right: 0;
-      width: 60px;
-      height: 2px;
-      background: $light-grey;
-    }
-    .row > .col-xs-12:nth-child(even) > .timeline-step > .step-container:before {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 0;
-      width: 60px;
-      height: 2px;
-      background: $light-grey;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: $light-grey;
+      }
     }
   }
   .form {
-    margin-top: 80px;
+    margin-top: 160px;
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 }
