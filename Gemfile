@@ -23,9 +23,13 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 # Geocoding property addresses with google geocoding API
 gem 'geocoder'
+# Emailing - gem to plug Postmark to the app
+gem 'postmark-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  # Emailing - for development
+  gem "letter_opener"
 end
 
 group :development, :test do

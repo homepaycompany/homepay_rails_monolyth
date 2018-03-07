@@ -1,0 +1,9 @@
+<h1>Hi <%= @user.first_name %>,</h1>
+
+<h2>Welcome to HOMEPAY</h2>
+
+<p>Your property is :</p>
+
+<% @property.attributes.keys.each do |k| %>
+  <p><%= "#{k} - #{@property.attributes[k]}" %></p>
+<% end %>
