@@ -9,14 +9,7 @@
         <div class="form-body">
           <%= render 'property_forms/form_sections/form_section_dispatch', page: @property_form.dsc_2_fields %>
         </div>
-        <div class="form-validation">
-          <div class="btn form-button" id="go-back">
-            Retour
-          </div>
-          <div class="btn form-button" id="validate-section">
-            Valider
-          </div>
-        </div>
+        <%= render 'property_forms/form_validation/form_validation', next_p: 'Valider', previous_p: 'Retour' %>
       </div>
     </div>
   </div>

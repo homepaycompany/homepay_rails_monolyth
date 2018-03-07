@@ -55,6 +55,11 @@
 }
 .form-button {
   font-size: 20px;
+  &.white {
+    background-color: white;
+    border: 1px solid $blue;
+    color: $blue;
+  }
 }
 .form-group {
   margin: 0;

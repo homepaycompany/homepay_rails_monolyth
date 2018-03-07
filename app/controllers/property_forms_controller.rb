@@ -88,7 +88,14 @@ class PropertyFormsController < ApplicationController
 
   def h_validation
     if @property_form.update(complete: true)
-      unless RealEstateProperty.create(@property_form.attributes.except('complete'))
+      property_attributes = {}
+      @property_form.attributes.keys.each do |k|
+        property_attributes[k] = @property_form.attributes[k] || false
+      end
+      property = RealEstateProperty.new(property_attributes.except('complete'))
+      property.property_form = @property_form
+      binding.pry
+      unless property.save
         flash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
         redirect_to root_path
       end

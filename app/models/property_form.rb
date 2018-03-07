@@ -62,10 +62,11 @@ class PropertyForm < ApplicationRecord
         ]
     if self.property_type == 'appartment'
       a += [
-            { section: 6, name: 'has_works_in_building_planned', input_type: 'boolean', desc: 'Des travaux sont-ils prévus dans l\'immeuble ?', validation_type: 'boolean', values: ['Neuf', 'Bon', 'Moyen', 'Mauvais'] }
+            { section: 6, name: 'building_state', input_type: 'state_box', desc: 'Etat général de l\'immeuble', validation_type: 'string', values: ['Neuf', 'Bon', 'Moyen', 'Mauvais'] },
+            { section: 7, name: 'has_works_in_building_planned', input_type: 'boolean', desc: 'Des travaux sont-ils prévus dans l\'immeuble ?', validation_type: 'boolean', values: ['Neuf', 'Bon', 'Moyen', 'Mauvais'] }
             ]
     end
-    sections = [{id: 1, type: 'input_section'}, {id: 2, type: 'input_section'}, {id: 3, type: 'input_section'}, {id: 4, type: 'input_section'}, {id: 5, type: 'input_section'}, {id: 6, type: 'input_section'}]
+    sections = [{id: 1, type: 'input_section'}, {id: 2, type: 'input_section'}, {id: 3, type: 'input_section'}, {id: 4, type: 'input_section'}, {id: 5, type: 'input_section'}, {id: 6, type: 'input_section'}, {id: 7, type: 'input_section'}]
     return { sections: sections, fields: a}
   end
 

@@ -7,28 +7,19 @@ class RealEstateProperty < ApplicationRecord
   :num_rooms,
   :num_bedrooms,
   :num_bathrooms,
-  :has_terrace,
-  :has_cellar,
   :property_state,
   :kitchen_state,
   :building_construction_year,
   :bathroom_state, presence: true
   validates :appartment_floor,
   :building_state,
-  :has_works_in_building_planned,
-  :has_elevator,
-  :has_parking,
-  :has_balcony, presence: true, if: :is_appartment?
+  :has_works_in_building_planned, presence: true, if: :is_appartment?
   validates :property_total_size_sqm,
   :num_floors,
-  :has_garage,
-  :has_pool,
-  :has_attic,
   :ground_floor_size_sqm, presence: true, if: :is_house?
-  validates :size_cellar_sqm, presence: true, if: :has_cellar?
-  validates :size_balcony_sqm, presence: true, if: :has_balcony?
-  validates :size_terrace_sqm, presence: true, if: :has_terrace?
-  validates :is_attic_convertible, presence: true, if: :has_attic?
+  validates :size_cellar_sqm, presence: true, numericality: { greater_than: 0 }, if: :has_cellar?
+  validates :size_balcony_sqm, presence: true, numericality: { greater_than: 0 }, if: :has_balcony?
+  validates :size_terrace_sqm, presence: true, numericality: { greater_than: 0 }, if: :has_terrace?
 
   def is_appartment?
     self.property_type == 'appartment'
