@@ -23,6 +23,13 @@
     list-style: none;
     color: $light-black;
     font-size: 16px;
+    p {
+      margin: 20px 0px;
+    }
+    img {
+      width: 90px;
+      height: 90px;
+    }
     .crucial-step {
       font-weight: 800;
       font-size: 18px;
@@ -37,7 +44,7 @@
         border-radius: 50%;
         background-color: $blue;
         position: absolute;
-        top: 43px;
+        top: 25px;
         left: calc(50% - 4px);
         z-index: 1;
       }
@@ -51,7 +58,7 @@
         border-radius: 50%;
         background-color: $grey;
         position: absolute;
-        top: 0px;
+        top: 110px;
         left: calc(50% - 4px);
         z-index: 1;
       }
@@ -74,7 +81,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 46px;
+        top: 28px;
         right: 0;
         width: 60px;
         height: 2px;
@@ -87,7 +94,7 @@
       &:after {
         content: "";
         position: absolute;
-        top: 4px;
+        top: 114px;
         right: 0;
         width: 60px;
         height: 2px;
@@ -100,7 +107,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 4px;
+        top: 114px;
         left: 0;
         width: 60px;
         height: 2px;
