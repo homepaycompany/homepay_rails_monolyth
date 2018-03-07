@@ -7,7 +7,7 @@
           <h1>Addresse de votre bien</h1>
         </div>
         <div class="form-body">
-          <div class="address-input-form text-center">
+          <div class="address-input-form text-center" id="js-form-address">
             <%= simple_form_for(@property_form) do |f| %>
               <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input form-border", placeholder: "Indiquez l'adresse de votre bien" } %>
               <%= f.submit "Demandez votre offre d'achat", class: "form-submit form-border" %>
