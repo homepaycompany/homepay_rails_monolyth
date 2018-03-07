@@ -12,7 +12,7 @@
     <% end %>
   </div>
   <%= simple_form_for(@property_form, remote: true) do |f| %>
-    <div class="div" id=<%= "js-hidden-form-#{t[:name]}" %>></div>
+    <input name="property_form[<%= t[:name] %>]" class = "hidden" id="property_form_<%= t[:name] %>" value="<%= t[:values][0] %>" />
     <%= f.submit class:"hidden form-field-submit-button"%>
   <% end %>
 </div>

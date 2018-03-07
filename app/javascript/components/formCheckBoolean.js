@@ -9,14 +9,8 @@ function addBooleanToForm () {
 
 function addOneChoiceToForm (b) {
   b.classList.toggle('active');
-  const id = `js-hidden-form-${b.dataset.name}`;
-  const formInputDiv = document.getElementById(id);
-  if (document.getElementById(`property_form_${b.dataset.name}`)) {
-    document.getElementById(`property_form_${b.dataset.name}`).remove();
-  } else {
-    const html = `<input name="property_form[${b.dataset.name}]" class = "hidden" id="property_form_${b.dataset.name}" value="1" />`
-    formInputDiv.insertAdjacentHTML('beforeEnd', html);
-  }
+  const f = document.getElementById(`property_form_${b.dataset.name}`);
+  f.value = Math.abs(f.value - 1);
 }
 
 function selectState () {

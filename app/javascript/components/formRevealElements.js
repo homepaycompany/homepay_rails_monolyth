@@ -21,15 +21,9 @@ function addChoicesToForm () {
 
 function addOneChoiceToForm (b) {
   b.classList.toggle('active');
-  const id = `js-hidden-form-${b.dataset.name}`;
-  const formInputDiv = document.getElementById(id);
   formRevealElements(b);
-  if (document.getElementById(`property_form_${b.dataset.name}`)) {
-    document.getElementById(`property_form_${b.dataset.name}`).remove();
-  } else {
-    const html = `<input name="property_form[${b.dataset.name}]" class = "hidden" id="property_form_${b.dataset.name}" value="1" />`
-    formInputDiv.insertAdjacentHTML('beforeEnd', html);
-  }
+  const f = document.getElementById(`property_form_${b.dataset.name}`);
+  f.value = Math.abs(f.value - 1);
 }
 
 function formRevealElements (b) {
@@ -38,6 +32,8 @@ function formRevealElements (b) {
     s.classList.toggle('hidden');
     if (s.querySelector('.form-control')) {
       s.querySelector('.form-control').classList.toggle('hidden')
+      s.querySelector('.form-control').classList.toggle('js-no-validate')
+      s.querySelector('.form-field-submit-button').classList.toggle('js-no-validate')
     }
   }
 }

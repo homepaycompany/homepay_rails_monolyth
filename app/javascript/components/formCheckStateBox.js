@@ -18,13 +18,8 @@ function toggleActiveState (b) {
 }
 
 function addOneChoiceToForm (b) {
-  const id = `js-hidden-form-${b.dataset.name}`;
-  const formInputDiv = document.getElementById(id);
-  if (document.getElementById(`property_form_${b.dataset.name}`)) {
-    document.getElementById(`property_form_${b.dataset.name}`).remove();
-  }
-  const html = `<input name="property_form[${b.dataset.name}]" class = "hidden" id="property_form_${b.dataset.name}" value="${b.dataset.value}" />`
-  formInputDiv.insertAdjacentHTML('beforeEnd', html);
+  const f = document.getElementById(`property_form_${b.dataset.name}`);
+  f.value = b.dataset.value
 }
 
 function selectState () {

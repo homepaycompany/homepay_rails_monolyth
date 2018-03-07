@@ -3,7 +3,9 @@ function formSectionValidation() {
   c.addEventListener('click', (e) => {
     if (validateFields()) {
       document.querySelectorAll('.form-field-submit-button').forEach((b) => {
-        b.click();
+        if (!b.classList.contains('js-no-validate')) {
+          b.click()
+        }
       })
       setTimeout(function(){document.getElementById('move-to-next-section').click();}, 1000)
     }
@@ -27,7 +29,7 @@ function validateFields() {
     } else if (f.type === 'tel' && f.value.match(/(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}/)) {
       i = i && true
       f.value = f.value.toLowerCase()
-    } else if (f.classList.contains('hidden')) {
+    } else if (f.classList.contains('js-no-validate')) {
       i = i && true
     } else {
       f.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML('beforeEnd', `<div class='form-wrong-input-format'>${f.type} incorrect<div>`)
