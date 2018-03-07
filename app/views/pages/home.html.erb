@@ -8,8 +8,12 @@
               <h1>Vendez votre logement en un clic</h1>
               <div class="address-input-form">
                 <%= simple_form_for(@property_form) do |f| %>
-                  <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input", placeholder: "Indiquez l'adresse de votre bien" } %>
-                  <%= f.submit "Demandez votre offre d'achat", class: "form-submit" %>
+                  <div class="form-input">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse de votre bien" } %>
+                  </div>
+                  <%= f.submit "Demandez votre offre d'achat", class: "form-submit hidden-xs hidden-sm" %>
+                  <%= f.submit "Je vends", class: "form-submit hidden-lg hidden-xl" %>
                 <% end %>
               </div>
               <p>Demandez une offre d'achat pour votre logement et <br>épargnez vous les désagréments liés à la mise en vente.</p>
@@ -17,7 +21,7 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="banner-testimonials">
+          <div class="banner-testimonials hidden-xs hidden-sm">
             <div class="banner-testimonial">
               <h4>En vente depuis 92 jours</h4>
               <p>15 visites et des mois de stress</p>

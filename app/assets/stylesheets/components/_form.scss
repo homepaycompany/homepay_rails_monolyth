@@ -1,0 +1,50 @@
+.address-input-form form {
+  display: inline-flex;
+  .form-border {
+    border: 1px solid $blue;
+    &:hover {
+      border-color: $dark-blue;
+    }
+  }
+  .form-input {
+    position: relative;
+    input {
+      height: 50px;
+      border: solid 2px white;
+      border-radius: 6px 0px 0px 6px;
+      width: 350px;
+      font-size: 14px;
+      padding-left: 35px;
+    }
+    i {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      color: #CCCCCC;
+    }
+  }
+  .form-submit {
+    height: 50px;
+    border: solid 2px white;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 0px 6px 6px 0px;
+    background-color: $blue;
+    transition: all ease 0.4s;
+    &:hover {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+  .address-input-form form {
+    .form-input {
+      border-radius: 6px 0px 0px 6px;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}
