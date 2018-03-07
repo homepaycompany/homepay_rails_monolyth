@@ -3,6 +3,7 @@
   border-radius: 10px;
   margin: 10px;
   padding: 10px 30px;
+  box-shadow: 0 0 1px $grey;
 }
 .form-container h1 {
   color: $blue;
@@ -100,5 +101,16 @@
     cursor: pointer;
   }
 }
-
-
+.progress-bar-container {
+  margin-top: 15px;
+  margin-bottom: -10px;
+  padding: 0 100px;
+  text-align: center;
+  .progress {
+    border-radius: 10px;
+    box-shadow: 0 0 1px $grey;
+  }
+  .progress-bar-success {
+    background-color: $blue;
+  }
+}

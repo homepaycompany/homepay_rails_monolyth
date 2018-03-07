@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "about" => 'pages#about_us'
   get "how-to" => 'pages#how_to'
 
-  resources :property_forms, only: [:show, :create, :update, :destroy] do
+  resources :property_forms, only: [:show, :new, :create, :update, :destroy] do
     get "address" => 'property_forms#a_address_validation'
     get "property_type" => 'property_forms#b_property_type_selection'
     put "description_1" => 'property_forms#c_description_1'

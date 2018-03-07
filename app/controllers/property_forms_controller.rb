@@ -17,6 +17,10 @@ class PropertyFormsController < ApplicationController
   def show
   end
 
+  def new
+    @property_form = PropertyForm.new
+  end
+
   def create
     @property_form = PropertyForm.create(property_form_params)
     redirect_to property_form_address_path(@property_form)
