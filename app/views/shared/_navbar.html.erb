@@ -14,13 +14,23 @@
   </div>
 
   <!-- Dropdown appearing on mobile only -->
+  <%= link_to "Vendre", new_property_form_path, class: "navbar-item navbar-link hidden-md hidden-lg" %>
   <div class="navbar-item hidden-md hidden-lg">
     <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <div data-toggle="dropdown">
+        Autre
+        <i class="fas fa-angle-down"></i>
+      </div>
       <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+        <li>
+          <%= link_to "A propos", about_path, class: "navbar-item navbar-link" %>
+
+        </li>
+        <li>
+          <%= link_to "Comment ça marche", how_it_works_path, class: "navbar-item navbar-link" %>
+        </li>
+        <li>
+        </li>
       </ul>
     </div>
   </div>

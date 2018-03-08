@@ -68,13 +68,16 @@
   .banner {
     min-height: calc(90vh - 70px);
     text-align: center;
-    h1 {
-      font-size: 32px;
-    }
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      margin-top: 20px;
+    .banner-content {
+      min-height: calc(90vh - 70px);
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
     }
   }
 }

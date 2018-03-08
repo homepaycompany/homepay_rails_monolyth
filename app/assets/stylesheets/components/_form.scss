@@ -1,5 +1,6 @@
 .address-input-form form {
   display: inline-flex;
+  width: 100%;
   .form-border {
     border: 1px solid $blue;
     &:hover {
@@ -7,12 +8,12 @@
     }
   }
   .form-input {
+    flex: 2;
     position: relative;
     input {
       height: 50px;
       border: solid 2px white;
       border-radius: 6px 0px 0px 6px;
-      width: 350px;
       font-size: 14px;
       padding-left: 35px;
     }
@@ -24,6 +25,7 @@
     }
   }
   .form-submit {
+    flex: 1;
     height: 50px;
     border: solid 2px white;
     color: white;
@@ -41,10 +43,17 @@
 // Mobile responsive
 @media (max-width: 768px) {
   .address-input-form form {
+    display: flex;
     .form-input {
       border-radius: 6px 0px 0px 6px;
-      width: 100%;
+      flex: 1 0 auto;
       font-size: 14px;
+    }
+    .form-submit {
+      flex: 0 0 33%;
+    }
+    i {
+      font-size: 20px;
     }
   }
 }
