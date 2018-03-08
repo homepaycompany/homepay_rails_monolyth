@@ -9,7 +9,7 @@
     width: 80%;
   }
   h2 {
-    color: $blue;
+    color: $green;
     font-size: 26px;
     font-weight: 800;
     margin-top: 0px;
@@ -35,14 +35,14 @@
       font-size: 18px;
       height: 80px;
       p {
-        color: $blue;
+        color: $green;
       }
       &:before {
         content: '';
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: $blue;
+        background-color: $green;
         position: absolute;
         top: 25px;
         left: calc(50% - 4px);
@@ -85,7 +85,7 @@
         right: 0;
         width: 60px;
         height: 2px;
-        background: $blue;
+        background: $green;
       }
     }
     .row > .col-xs-12:nth-child(odd) > .timeline-step > .step-container {

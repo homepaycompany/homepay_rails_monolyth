@@ -1,3 +1,4 @@
+// Banner on landing page
 .banner {
   min-height: calc(70vh - 70px);
   .banner-content {
@@ -63,7 +64,21 @@
   }
 }
 
-// Mobile responsive
+// Banner on about-us page
+.banner-about {
+  min-height: calc(60vh - 70px);
+  color: $green;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  h1 {
+    font-size: 46px;
+    font-weight: 800;
+  }
+}
+
+// Mobile responsive of landing page banner
 @media (max-width: 768px) {
   .banner {
     min-height: calc(90vh - 70px);
