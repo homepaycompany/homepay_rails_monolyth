@@ -17,7 +17,7 @@
   font-size: 15px;
   padding: 5px 10px;
   border-radius: 15px;
-  background-color: $blue;
+  background-color: $green;
   color: white;
   box-shadow: 0 0 2px $light-grey;
   &:hover {
@@ -30,7 +30,7 @@
 .dropzone-btn {
   &:hover {
     box-shadow: 0 0 10px $light-grey;
-    background-color: $dark-blue;
+    background-color: $dark-green;
     cursor: pointer;
   }
 }
