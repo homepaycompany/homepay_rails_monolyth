@@ -9,7 +9,7 @@
     width: 80%;
   }
   h2 {
-    color: $blue;
+    color: $green;
     font-size: 26px;
     font-weight: 800;
     margin-top: 0px;
@@ -35,14 +35,14 @@
       font-size: 18px;
       height: 80px;
       p {
-        color: $blue;
+        color: $green;
       }
       &:before {
         content: '';
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: $blue;
+        background-color: $green;
         position: absolute;
         top: 25px;
         left: calc(50% - 4px);
@@ -69,7 +69,7 @@
         background-color: $light-grey;
         position: absolute;
         width: 1px;
-        height: 300px;
+        height: 250px;
         top: 0px;
         left: 50%;
         display: block;
@@ -85,7 +85,7 @@
         right: 0;
         width: 60px;
         height: 2px;
-        background: $blue;
+        background: $green;
       }
     }
     .row > .col-xs-12:nth-child(odd) > .timeline-step > .step-container {
@@ -120,5 +120,41 @@
     h2 {
       margin-bottom: 30px;
     }
+  }
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+  .how-it-works-section {
+    padding: 20px;
+    .container {
+      width: 100%;
+    }
+  }
+  .timeline {
+    padding: 0px;
+    p {
+      text-align: center;
+    }
+  }
+  .crucial-step-container, .step-container {
+    padding: 0px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .crucial-step-container:before {
+    content: none !important;
+  }
+  .regular-step, .crucial-step {
+    &:before {
+      content: none !important;
+    }
+    p, img {
+      z-index: 1;
+    }
+  }
+  .form {
+    margin-top: 40px !important;
   }
 }
