@@ -59,3 +59,18 @@ footer {
     }
   }
 }
+
+// Mobile responsive
+@media (max-width: 768px) {
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+  h4 {
+    margin: 20px 0px 10px 0px;
+  }
+  .footer-links ul {
+    display: flex;
+    justify-content: center;
+  }
+}
