@@ -1,7 +1,7 @@
 function formSectionValidation() {
   const c = document.getElementById('validate-section');
   c.addEventListener('click', (e) => {
-    if (validateFields()) {
+    if (!c.classList.contains('js-block-next-section') && validateFields()) {
       document.querySelectorAll('.form-field-submit-button').forEach((b) => {
         if (!b.classList.contains('js-no-validate')) {
           b.click()

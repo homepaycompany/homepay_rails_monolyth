@@ -7,6 +7,7 @@ import { addBooleanToForm } from '../components/formCheckBoolean'
 import { addStateToForm } from '../components/formCheckStateBox'
 import { waypoint } from '../shared/landing_page.js'
 import { validateAddress } from '../components/addressValidation'
+import { launchDropzone } from '../components/dropzone'
 
 // Javascript for autocomplete
 if (document.getElementById('real_estate_property_address')) {
@@ -42,3 +43,12 @@ if (document.getElementById('js-value-prop-sale')) {
 if (document.getElementById('js-form-address')) {
   validateAddress();
 }
+
+// JS for launching dropzone
+// JS for validating the address before creating a form
+if (document.getElementById('doc-dropzone')) {
+  launchDropzone();
+}
+
+
+

@@ -60,6 +60,13 @@
     border: 1px solid $blue;
     color: $blue;
   }
+  .disabled {
+    background-color: $light-grey;
+
+    &:hover {
+      cursor: none;
+    }
+  }
 }
 .form-group {
   margin: 0;
