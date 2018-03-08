@@ -10,11 +10,10 @@
                 <%= simple_form_for(@property_form) do |f| %>
                   <div class="form-input">
                     <i class="fas fa-map-marker-alt"></i>
-                    <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse de votre bien", class: "hidden-xs hidden-sm" } %>
-                    <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse", class: "hidden-lg hidden-xl" } %>
+                    <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse" } %>
                   </div>
-                  <%= f.submit "Demandez votre offre d'achat", class: "form-submit hidden-xs hidden-sm" %>
-                  <%= f.submit "Je vends", class: "form-submit hidden-lg hidden-xl" %>
+                  <%= f.submit "Demandez votre offre d'achat", class: "form-submit visible-md visible-lg visible-xl" %>
+                  <%= f.submit "Je vends", class: "form-submit visible-xs visible-sm" %>
                 <% end %>
               </div>
               <p>Demandez une offre d'achat pour votre logement et <br>épargnez vous les désagréments liés à la mise en vente.</p>
@@ -69,12 +68,12 @@
         </div>
         <div class="col-xs-12">
           <div class="landing-step" id="landing-first-step">
-            <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-sm-push-6">
+            <div class="col-xs-12 col-md-offset-1 col-md-4 col-md-push-6">
               <div class="landing-step-img text-center">
                 <%= image_tag 'step_1.png' %>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-sm-pull-4">
+            <div class="col-xs-12 col-md-6 col-md-pull-4">
               <div class="landing-step-card">
                 <h4 class="text-center">1</h4>
                 <h3>Décrivez votre bien</h3>
@@ -86,12 +85,12 @@
         </div>
         <div class="col-xs-12">
           <div class="landing-step" id="landing-second-step">
-            <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+            <div class="col-xs-12 col-md-4 col-md-offset-1">
               <div class="landing-step-img text-center">
                 <%= image_tag 'step_2.png' %>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
               <div class="landing-step-card">
                 <h4 class="text-center">2</h4>
                 <h3>Recevez des offres</h3>
@@ -103,12 +102,12 @@
         </div>
         <div class="col-xs-12">
           <div class="landing-step" id="landing-third-step">
-            <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-sm-push-6">
+            <div class="col-xs-12 col-md-offset-1 col-md-4 col-md-push-6">
               <div class="landing-step-img text-center">
                 <%= image_tag 'step_3.png' %>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-sm-pull-4">
+            <div class="col-xs-12 col-md-6 col-md-pull-4">
               <div class="landing-step-card">
                 <h4 class="text-center">3</h4>
                 <h3>Choisissez la meilleure option pour vous</h3>

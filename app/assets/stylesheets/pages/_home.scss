@@ -162,7 +162,7 @@
 }
 
 // Mobile responsive
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .landing-prop {
     padding: 30px 0px;
     img {
@@ -174,6 +174,9 @@
   }
   #landing-first-step .landing-step-img:before, #landing-second-step .landing-step-img:before {
     content: none !important;
+  }
+  .landing-steps > .container {
+    width: 100%;
   }
   .landing-step-card {
     margin: 30px 0px !important;
@@ -192,5 +195,15 @@
       max-height: 100%;
       max-width: 100%;
     }
+  }
+}
+@media (max-width: 1700px) {
+  .landing-steps > .container {
+      width: 80%;
+  }
+}
+@media (max-width: 1300px) {
+  .landing-steps > .container {
+      width: 90%;
   }
 }

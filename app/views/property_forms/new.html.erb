@@ -11,11 +11,10 @@
             <%= simple_form_for(@property_form) do |f| %>
               <div class="form-input">
                 <i class="fas fa-map-marker-alt"></i>
-                <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse de votre bien", class: "hidden-xs hidden-sm" } %>
-                <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse", class: "hidden-lg hidden-xl" } %>
+                <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse" } %>
               </div>
-              <%= f.submit "Demandez votre offre d'achat", class: "form-submit hidden-xs hidden-sm" %>
-              <%= f.submit "Je vends", class: "form-submit hidden-lg hidden-xl" %>
+              <%= f.submit "Demandez votre offre d'achat", class: "form-submit visible-md visible-lg visible-xl" %>
+              <%= f.submit "Je vends", class: "form-submit visible-xs visible-sm" %>
             <% end %>
           </div>
         </div>
