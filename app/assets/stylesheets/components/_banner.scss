@@ -49,7 +49,7 @@
     .banner-testimonial-homepay {
       color: rgba(256, 256, 256, 1);
       top: 50%;
-      right: -120%;
+      right: -75%;
       &:after {
         content: "";
         background-color: rgba(256, 256, 256, 1);
@@ -78,7 +78,7 @@
   }
 }
 
-// Mobile responsive of landing page banner
+// Mobile responsive of banners
 @media (max-width: 768px) {
   .banner {
     min-height: calc(90vh - 70px);
@@ -93,6 +93,12 @@
         font-weight: 400;
         margin-top: 20px;
       }
+    }
+  }
+  .banner-about {
+    min-height: calc(70vh - 70px);
+    h1 {
+      font-size: 32px;
     }
   }
 }

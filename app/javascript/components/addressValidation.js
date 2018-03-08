@@ -1,12 +1,14 @@
 function validateAddress () {
   const f = document.getElementById('js-form-address');
-  f.querySelector('.form-submit').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelectorAll('.form-wrong-input-format').forEach((w) => {
-      w.remove();
+  f.querySelectorAll('.form-submit').forEach((b) => {
+    b.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.form-wrong-input-format').forEach((w) => {
+        w.remove();
+      })
+      const i = f.querySelector('#real_estate_property_address').value;
+      googleGeocoder(i);
     })
-    const i = f.querySelector('#real_estate_property_address').value;
-    googleGeocoder(i);
   })
 }
 
@@ -26,7 +28,7 @@ function googleGeocoder (address) {
 function checkIfAddressIsOk (results) {
   const f = document.getElementById('js-form-address').querySelector('form');
   if (results) {
-    if (results['types'] == 'street_address' && results['formatted_address'].match(/france/i)) {
+    if ((results['types'] == 'street_address' || results['types'] == 'premise' ) && results['formatted_address'].match(/france/i)) {
       f.submit();
     } else {
     displayError();
