@@ -1,0 +1,36 @@
+.dropzone-preview-container {
+  width: 100%;
+}
+
+.dropzone-image-card {
+  float: left;
+  margin: 7px;
+  height: 120px;
+  width: 120px;
+}
+.dropzone-image {
+  border-radius: 5px;
+}
+
+.dropzone-btn {
+  margin: 20px 0;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: $green;
+  color: white;
+  box-shadow: 0 0 2px $light-grey;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// HOVER STYLES on PCs
+
+.dropzone-btn {
+  &:hover {
+    box-shadow: 0 0 10px $light-grey;
+    background-color: $dark-green;
+    cursor: pointer;
+  }
+}

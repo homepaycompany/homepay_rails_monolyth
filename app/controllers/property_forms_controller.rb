@@ -8,9 +8,10 @@ class PropertyFormsController < ApplicationController
     :c_description_1,
     :d_description_2,
     :e_description_3,
-    :f_personnal_information,
-    :g_confirmation,
-    :h_validation]
+    :f_add_images,
+    :g_personnal_information,
+    :h_confirmation,
+    :i_validation]
 
   # CRUD ACTIONS
 
@@ -66,10 +67,14 @@ class PropertyFormsController < ApplicationController
   def e_description_3
   end
 
-  def f_personnal_information
+  def f_add_images
+    @property_image = PropertyImage.new
   end
 
-  def g_confirmation
+  def g_personnal_information
+  end
+
+  def h_confirmation
     if User.find_by(email: @property_form.email)
       user = User.find_by(email: @property_form.email)
     else
@@ -86,7 +91,7 @@ class PropertyFormsController < ApplicationController
     @marker = { lat: @property_form.latitude, lng: @property_form.longitude }
   end
 
-  def h_validation
+  def i_validation
     if @property_form.update(complete: true)
       property_attributes = {}
       @property_form.attributes.keys.each do |k|
@@ -97,6 +102,10 @@ class PropertyFormsController < ApplicationController
       unless property.save
         flash[:alert] = "Un erreur est survenue - le formulaire n'a pas pu être créé"
         redirect_to root_path
+      else
+        @property_form.property_images.each do |i|
+          i.update(real_estate_property_id: property.id)
+        end
       end
     end
   end
