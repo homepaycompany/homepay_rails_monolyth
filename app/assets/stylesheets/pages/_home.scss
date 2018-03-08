@@ -48,9 +48,9 @@
       line-height: 40px;
       margin: 0px;
       font-size: 18px;
+      font-weight: 800;
       color: white;
       background: $blue;
-      font-weight: 800;
       border-radius: 50%;
     }
     h3 {
@@ -158,5 +158,38 @@
     margin: 10px 0px;
     width: 120px;
     height: 120px;
+  }
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .landing-prop {
+    padding: 30px 0px;
+    img {
+      margin-top: 30px;
+    }
+  }
+  .landing-prop > .container, .landing-steps > .container, .landing-advantages > .container {
+    width: 90%;
+  }
+  #landing-first-step .landing-step-img:before, #landing-second-step .landing-step-img:before {
+    content: none !important;
+  }
+  .landing-step-card {
+    margin: 30px 0px !important;
+    padding: 20px !important;
+    max-width: 100%;
+    h4 {
+      width: 30px !important;
+      height: 30px !important;
+      line-height: 30px !important;
+      font-size: 16px !important;
+    }
   }
 }
