@@ -6,10 +6,10 @@
           <div class="banner-content">
             <div>
               <h1>Vendez votre logement en quelques minutes</h1>
-              <div class="address-input-form">
+              <div class="address-input-form" id="js-form-address">
                 <%= simple_form_for(@property_form) do |f| %>
                   <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", class: "form-input", placeholder: "Indiquez l'adresse de votre bien" } %>
-                  <%= f.submit "Demandez votre offre d'achat", class: "form-submit" %>
+                  <%= f.submit "Demandez votre offre d'achat", type: 'button', class: "form-submit" %>
                 <% end %>
               </div>
               <p>Demandez une offre d'achat pour votre logement et <br>épargnez vous les désagréments liés à la mise en vente.</p>
