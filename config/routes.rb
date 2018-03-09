@@ -10,17 +10,17 @@ Rails.application.routes.draw do
   get "how-it-works" => 'pages#how_it_works'
 
   # Property form funnel routes
-  resources :property_forms, only: [:show, :new, :create, :update, :destroy] do
-    get "address" => 'property_forms#a_address_validation'
-    get "property_type" => 'property_forms#b_property_type_selection'
-    put "description_1" => 'property_forms#c_description_1'
-    get "description_2" => 'property_forms#d_description_2'
-    get "description_3" => 'property_forms#e_description_3'
-    get "photos" => 'property_forms#f_add_images'
-    get "personnal_information" => 'property_forms#g_personnal_information'
-    get "confirmation" => 'property_forms#h_confirmation'
-    get "validation" => 'property_forms#i_validation'
-  end
+  resources :property_forms, only: [:show, :new, :create, :update, :destroy]
+
+  get "seller/:token/address", to: "property_forms#a_address_validation", as: :form_step_1
+  get "seller/:token/property_type", to: "property_forms#b_property_type_selection", as: :form_step_2
+  put "seller/:token/description_1", to: "property_forms#c_description_1", as: :form_step_3
+  get "seller/:token/description_2", to: "property_forms#d_description_2", as: :form_step_4
+  get "seller/:token/description_3", to: "property_forms#e_description_3", as: :form_step_5
+  get "seller/:token/photos", to: "property_forms#f_add_images", as: :form_step_6
+  get "seller/:token/personnal_information", to: "property_forms#g_personnal_information", as: :form_step_7
+  get "seller/:token/confirmation", to: "property_forms#h_confirmation", as: :form_step_8
+  get "seller/:token/validation", to: "property_forms#i_validation", as: :form_step_9
 
   # Property image routes to create or delete an image
   resources :property_images, only: [:create]

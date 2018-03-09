@@ -16,6 +16,6 @@
   </div>
 </div>
 
-<%= link_to property_form_description_2_path(@property_form), method: :get do %>
+<%= link_to form_step_4_path(@property_form.token), method: :get do %>
   <div class="btn hidden" id="move-to-next-section"></div>
 <% end %>

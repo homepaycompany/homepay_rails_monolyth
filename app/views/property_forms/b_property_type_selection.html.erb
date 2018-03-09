@@ -9,7 +9,7 @@
         <div class="form-body">
           <div class="row">
             <div class="col-xs-6 text-center">
-              <%= link_to property_form_description_1_path(@property_form, property_type:'house'), method: :put do %>
+              <%= link_to form_step_3_path(@property_form.token, property_type:'house'), method: :put do %>
                 <div class="btn">
                   <i class="fas fa-home" style="font-size: 100px;"></i>
                 </div>
@@ -17,7 +17,7 @@
               <p>Maison</p>
             </div>
             <div class="col-xs-6 text-center">
-              <%= link_to property_form_description_1_path(@property_form, property_type:'appartment'), method: :put do %>
+              <%= link_to form_step_3_path(@property_form.token, property_type:'appartment'), method: :put do %>
                 <div class="btn">
                   <i class="far fa-building" style="font-size: 100px;"></i>
                 </div>

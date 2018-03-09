@@ -4,6 +4,7 @@ class PropertyForm < ApplicationRecord
 
   has_many :property_images
   has_one :real_estate_property
+  validates :token, uniqueness: true
 
   def dsc_1_fields
     a = [
