@@ -53,21 +53,6 @@
   font-size: 13px;
   color: $red;
 }
-.form-button {
-  font-size: 20px;
-  &.white {
-    background-color: white;
-    border: 1px solid $green;
-    color: $green;
-  }
-  .disabled {
-    background-color: $light-grey;
-
-    &:hover {
-      cursor: none;
-    }
-  }
-}
 .form-group {
   margin: 0;
 }
