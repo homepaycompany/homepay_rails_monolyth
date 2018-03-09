@@ -7,7 +7,7 @@
             <h2>Votre demande est envoyée</h2>
             <%= image_tag "confirmation.png" %>
             <p>
-              Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande pour votre logement situé à l'adresse : <%= @property_form.address %>.
+              <%= @property_form.first_name.capitalize %>, nous sommes heureux de vous annoncer que nous avons bien reçu votre demande pour votre logement situé à l'adresse : <%= @property_form.address %>.
             </p>
             <div class="validation-prop">
               <div class="col-xs-12 col-sm-6">
