@@ -10,6 +10,14 @@
     color: $green;
     margin: 0px 0px 20px 0px;
   }
+  h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: $black;
+    strong {
+      color: $green;
+    }
+  }
   p {
     font-size: 16px;
     color: $light-black;
@@ -20,11 +28,25 @@
     margin: 0 0 20px 0;
   }
   .validation-prop {
-    margin: 50px 0px;
+    margin: 20px 0px 50px 0px;
+    strong {
+      color: $green;
+    }
     ul {
-      margin: 20px 0px;
+      margin: 10px 0px 10px 10px;
+      padding: 0px;
       list-style: none;
       text-align: left;
+      &:before {
+        content: "";
+        background-color: $light-grey;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
     }
     li {
       margin-bottom: 10px;
