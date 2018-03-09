@@ -30,6 +30,8 @@ gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
 # Admin interface with Forest
 gem 'forest_liana'
+# Error tracking
+gem 'appsignal'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
