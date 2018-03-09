@@ -1,6 +1,6 @@
 <div class="form-field-label">
-  <i class="fas fa-text-width form-field-logo"></i>
-  <span><%= t[:desc] %></span>
+  <%= image_tag t[:icon], class: "form-icon" %>
+  <strong><%= t[:desc] %></strong>
 </div>
 <div class="form-input">
   <%= simple_form_for(@property_form, remote: true) do |f| %>
