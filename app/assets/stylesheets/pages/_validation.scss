@@ -8,32 +8,42 @@
     font-size: 26px;
     font-weight: 800;
     color: $green;
-    margin-top: 0px;
-  }
-  h3 {
-    font-size: 22px;
-    font-weight: 800;
-    color: $black;
+    margin: 0px 0px 20px 0px;
   }
   p {
     font-size: 16px;
     color: $light-black;
-    margin: 40px 0px;
+    margin: 10px 0px;
   }
   img {
     max-width: 300px;
+    margin: 0 0 20px 0;
+  }
+  .validation-prop {
+    margin: 50px 0px;
+    ul {
+      margin: 20px 0px;
+      list-style: none;
+      text-align: left;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    i {
+      color: $green;
+      font-size: 14px;
+      margin-right: 10px;
+    }
   }
   .validation-steps {
-    margin: 40px 0px;
+    margin: 50px 0px;
   }
   .validation-contact {
-    margin: 40px 0px;
+    margin: 50px 0px;
     a {
       text-decoration: none;
       color: $green;
-    }
-    p {
-      margin: 10px 0px;
     }
     img {
       width: 140px;
