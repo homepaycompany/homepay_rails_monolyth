@@ -23,8 +23,8 @@ class PropertyFormsController < ApplicationController
   end
 
   def create
-    @property_form = PropertyForm.create(property_form_params)
-    @property_form.update(token: set_property_form_token)
+    @property_form = PropertyForm.create(token: set_property_form_token)
+    @property_form .update(property_form_params)
     redirect_to form_step_1_path(@property_form.token)
   end
 
