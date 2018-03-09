@@ -2,7 +2,7 @@ import Dropzone from 'dropzone';
 import 'dropzone/dist/dropzone.css';
 
 function launchDropzone() {
-  disableNextSection();
+  // disableNextSection();
   if (document.getElementById('js-dropzone-uploaded')) {
     enableNextSection();
   }
@@ -44,8 +44,9 @@ function disableNextSection () {
 
 function enableNextSection () {
   const b = document.getElementById('validate-section');
-  b.classList.remove('js-block-next-section');
-  b.classList.remove('disabled');
+  b.innerHTML = "Continuer"
+  // b.classList.remove('js-block-next-section');
+  // b.classList.remove('disabled');
 
 }
 
