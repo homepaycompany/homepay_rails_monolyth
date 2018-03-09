@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get "home" => 'pages#landing_liquidity'
   get "about" => 'pages#about_us'
   get "how-it-works" => 'pages#how_it_works'
-  get "validation" => 'pages#validation'
 
   # Property form funnel routes
   resources :property_forms, only: [:show, :new, :create, :update, :destroy] do
