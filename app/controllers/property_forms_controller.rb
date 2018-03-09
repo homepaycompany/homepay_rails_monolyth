@@ -75,6 +75,7 @@ class PropertyFormsController < ApplicationController
   end
 
   def h_confirmation
+    binding.pry
     if User.find_by(email: @property_form.email)
       user = User.find_by(email: @property_form.email)
     else
