@@ -2,14 +2,29 @@
   <div class="container">
     <div class="validation-section">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <%= image_tag "confirmation.png" %>
-            <h1>Votre demande est envoyée</h1>
-            <p>Je m'appelle Guillaume et je suis votre référent pour la vente de votre logement. N'hésitez pas à me contacter si vous avez des questions. Nous avons hâte de travailler avec vous.</p>
+        <div class="validation-steps text-center">
+          <h2>Votre demande est envoyée</h2>
+          <%= image_tag "confirmation.png" %>
+          <p>Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande d'offres pour votre bien immobilier.</p>
+          <h3>Les prochaines étapes</h3>
+          <p>Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande d'offres pour votre bien immobilier</p>
+
+        </div>
+        <div class="validation-contact text-center">
+          <div class="row">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+              <h2>Votre référent</h2>
+              <p>Je m'appelle Guillaume et je suis votre référent pour la vente de votre logement. N'hésitez pas à me contacter si vous avez des questions. Nous avons hâte de travailler avec vous.</p>
+            </div>
+            <%= image_tag "guillaume.png" %>
+            <p>Guillaume Lestrade</p>
+            <p>Téléphone : <%= link_to "06 00 00 00 00", "tel:0600000000" %></p>
+            <p>Email : <%= mail_to "guillaume@homepay.fr" %></p>
           </div>
-          <%= link_to "Retour", root_path, class: "btn" %>
-      </div>
+        </div>
+        <div class="validation-home">
+          <%= link_to "Retour sur la page d'accueil", root_path, class: "btn" %>
+        </div>
     </div>
   </div>
 </div>
