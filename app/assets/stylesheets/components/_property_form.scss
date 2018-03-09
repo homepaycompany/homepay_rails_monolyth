@@ -1,22 +1,32 @@
 .form-container {
+  min-height: calc(100vh - 310px);
   background-color: white;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px 30px;
   box-shadow: 0 0 1px $grey;
+  h1 {
+    color: $green;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 }
-.form-container h1 {
-  color: $green;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.form-body .form-section:last-child {
-  border-bottom: none;
-}
-.form-section {
-  border-bottom: 1px solid $light-grey;
-  padding: 20px 0;
+
+.form-body {
+  min-height: calc(100vh - 500px);
+  .form-section {
+    border-bottom: 1px solid $light-grey;
+    padding: 20px 0;
+  }
+  .form-section:last-child {
+    border-bottom: none;
+  }
 }
 .form-field {
   margin-left: 10px;
