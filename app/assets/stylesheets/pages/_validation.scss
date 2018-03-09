@@ -1,5 +1,9 @@
 .validation-section {
   padding: 40px 0px;
+  background-color: white;
+  border-radius: 6px;
+  margin: 40px 0px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   h2 {
     font-size: 26px;
     font-weight: 800;
@@ -20,24 +24,19 @@
     max-width: 300px;
   }
   .validation-steps {
-    background-color: white;
-    border-radius: 6px;
-    padding: 40px;
     margin: 40px 0px;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   }
   .validation-contact {
-    background-color: white;
-    border-radius: 6px;
-    padding: 40px;
     margin: 40px 0px;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
     a {
       text-decoration: none;
       color: $green;
     }
+    p {
+      margin: 10px 0px;
+    }
     img {
-      width: 200px;
+      width: 140px;
     }
   }
   .validation-home {

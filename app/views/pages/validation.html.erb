@@ -2,24 +2,60 @@
   <div class="container">
     <div class="validation-section">
       <div class="container">
-        <div class="validation-steps text-center">
-          <h2>Votre demande est envoyée</h2>
-          <%= image_tag "confirmation.png" %>
-          <p>Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande d'offres pour votre bien immobilier.</p>
-          <h3>Les prochaines étapes</h3>
-          <p>Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande d'offres pour votre bien immobilier</p>
-
-        </div>
-        <div class="validation-contact text-center">
+        <div class="validation-card text-center">
           <div class="row">
             <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-              <h2>Votre référent</h2>
-              <p>Je m'appelle Guillaume et je suis votre référent pour la vente de votre logement. N'hésitez pas à me contacter si vous avez des questions. Nous avons hâte de travailler avec vous.</p>
+              <h2>Votre demande est envoyée</h2>
+              <%= image_tag "confirmation.png" %>
+              <p>
+                Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande pour votre logement situé à l'adresse : [TBC].
+              </p>
             </div>
-            <%= image_tag "guillaume.png" %>
-            <p>Guillaume Lestrade</p>
-            <p>Téléphone : <%= link_to "06 00 00 00 00", "tel:0600000000" %></p>
-            <p>Email : <%= mail_to "guillaume@homepay.fr" %></p>
+            <div class="col-xs-12 col-sm-6">
+              <p>
+                Homepay
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <ul>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+              <div class="validation-steps">
+                <h3>Les prochaines étapes</h3>
+                <p>
+                  Nous sommes heureux de vous annoncer que nous avons bien reçu votre demande d'offres pour votre bien immobilier
+                </p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+              <div class="validation-contact">
+                <h2>Votre contact</h2>
+                <p>Je m'appelle Guillaume et je vais vous aider sur les différentes étapes liées à la vente de de votre logement. N'hésitez pas à me contacter si vous avez des questions. Nous sommes impatients de vous accompagner.</p>
+                <%= image_tag "confirmation_guillaume.png" %>
+                <p><strong>Guillaume Lestrade</strong></p>
+                <p>Téléphone : <%= link_to "06 00 00 00 00", "tel:0600000000" %></p>
+                <p>Email   : <%= mail_to "guillaume@homepay.fr" %></p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="validation-home">
