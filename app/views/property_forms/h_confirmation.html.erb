@@ -4,12 +4,12 @@
       <%= render 'property_forms/progress_bar/progress_bar', section: 8, name: 'Confirmation' %>
       <div class="form-container">
         <div class="form-title text-center">
-          <h1>Confirmation de votre dossier</h1>
+          <h1 class="confirmation">Bravo, c'est presque terminé !</h1>
+          <h2>Voici un récapitulatif de votre dossier, merci de bien verifier chaque élément</h2>
         </div>
         <div class="form-body">
           <div class="form-section">
-            <div id="map" style="width: 100%;height: 300px; margin-bottom: 20px" data-markers="<%= @marker.to_json %>"></div>
-            <p class="text-center"><%= @property_form.address %></p>
+            <%= render 'property_forms/form_map/form_map' %>
           </div>
           <% @property_form.all_pages.each do |page| %>
             <%= render 'property_forms/form_sections/form_section_dispatch', page: page %>

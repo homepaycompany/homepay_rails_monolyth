@@ -1,135 +1,146 @@
 .form-container {
+  min-height: calc(100vh - 310px);
   background-color: white;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px 30px;
   box-shadow: 0 0 1px $grey;
-}
-.form-container h1 {
-  color: $green;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.form-body .form-section:last-child {
-  border-bottom: none;
-}
-.form-section {
-  border-bottom: 1px solid $light-grey;
-  padding: 20px 0;
-}
-.form-field {
-  margin-left: 10px;
-  margin-bottom: 10px;
-  &:first-child {
-    margin-left: 0px;
+
+  // TEXT STYLES
+
+  h1 {
+    color: $green;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
   }
-}
-.form-field-toggle {
-  display: flex;
-  align-items: center;
-}
-.form-field-label {
-  display: flex;
-  margin-bottom: 10px;
-  font-size: 15px;
-  height: 60px;
-}
-.form-field-logo {
-  font-size: 25px;
-  color: $green;
-  margin-right: 10px;
-}
-.form-input input {
-  width: 100%;
-  color: $green;
-}
-.form-validation {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.form-wrong-input-format {
-  font-size: 13px;
-  color: $red;
-}
-.form-button {
-  font-size: 20px;
-  &.white {
-    background-color: white;
-    border: 1px solid $green;
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0 0 12.5px;
+    font-weight: bold;
+  }
+
+  // LAYOUT STYLES
+
+  .form-body {
+    min-height: calc(100vh - 500px);
+  }
+  .form-section {
+    border-bottom: 1px solid $light-grey;
+    padding: 20px 0;
+  }
+  .form-section:last-child {
+    border-bottom: none;
+  }
+  .form-group {
+    margin: 0;
+  }
+  .form-choice-section {
+    padding: 15px;
+  }
+  .form-field-label {
+    display: flex;
+    margin-bottom: 10px;
+    height: 60px;
+  }
+  .form-validation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // INPUT FIELDS STYLES
+
+  .form-field {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+  .form-field-toggle {
+    display: flex;
+    align-items: center;
+  }
+  .form-field-logo {
+    font-size: 25px;
+    color: $green;
+    margin-right: 10px;
+  }
+  .form-input input {
+    width: 100%;
     color: $green;
   }
-  .disabled {
-    background-color: $light-grey;
 
-    &:hover {
-      cursor: none;
+  .form-wrong-input-format {
+    font-size: 13px;
+    color: $red;
+  }
+
+  // BUTTONS AND BOXES STYLES
+
+  .form-button {
+    font-size: 17px;
+    &.white {
+      background-color: white;
+      border: 1px solid $green;
+      color: $green;
+    }
+    .disabled {
+      background-color: $light-grey;
+    }
+  }
+  .form-selection-box {
+    height: 80px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $grey;
+    background-color: $light-grey;
+    border: 1px solid white;
+    border-radius: 5px;
+    &.active {
+      background-color: $green;
+      border-color: $green;
+      color: white;
+    }
+  }
+  .form-state-box {
+    float: left;
+    height: 50px;
+    width: 160px;
+    margin: 10px 10px 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $grey;
+    background-color: $light-grey;
+    border: 1px solid white;
+    border-radius: 5px;
+    &.active {
+      background-color: $green;
+      color: white;
     }
   }
 }
-.form-group {
-  margin: 0;
-}
-.form-choice-section {
-  padding: 15px;
-}
-.form-selection-box {
-  height: 80px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: $grey;
-  background-color: $light-grey;
-  border: 1px solid white;
-  border-radius: 5px;
-  &.active {
-    background-color: $green;
-    border-color: $green;
-    color: white;
+
+// HOVER STYLES on PCs
+
+.form-container {
+  .form-button.disabled:hover {
+    cursor: none;
   }
-  &:hover {
+  .form-selection-box:hover {
     cursor: pointer;
   }
-}
-.form-state-box {
-  float: left;
-  height: 50px;
-  width: 160px;
-  margin: 10px 10px 10px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: $grey;
-  background-color: $light-grey;
-  border: 1px solid white;
-  border-radius: 5px;
-  &.active {
-    background-color: $green;
-    color: white;
-  }
-  &:hover {
+  .form-state-box:hover {
     cursor: pointer;
-  }
-}
-.progress-bar-container {
-  margin-top: 15px;
-  margin-bottom: -10px;
-  padding: 0 100px;
-  text-align: center;
-  .progress {
-    border-radius: 10px;
-    box-shadow: 0 0 1px $grey;
-  }
-  .progress-bar-success {
-    background-color: $green;
   }
 }
 
-// MEDIA WIDTH RELATED STYLES
-@media(max-width: 768px) {
-  .progress-bar-container .progress-bar-success {
-    color: transparent;
-  }
-}
+
