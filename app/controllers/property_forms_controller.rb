@@ -24,7 +24,8 @@ class PropertyFormsController < ApplicationController
 
   def create
     @property_form = PropertyForm.create(property_form_params)
-    redirect_to property_form_address_path(@property_form)
+    @property_form.update(token: set_property_form_token)
+    redirect_to form_step_1_path(@property_form.token)
   end
 
   def update
@@ -113,10 +114,8 @@ class PropertyFormsController < ApplicationController
   private
 
   def set_property_form
-    if params[:property_form_id]
-      @property_form = PropertyForm.find(params[:property_form_id])
-    else
-      @property_form = PropertyForm.find(params[:id])
+    if params[:token]
+      @property_form = PropertyForm.find_by(token: params[:token])
     end
   end
 
@@ -155,5 +154,15 @@ class PropertyFormsController < ApplicationController
     :email,
     :phone_number,
     :time_to_sell)
+  end
+
+  def set_property_form_token
+    tokens = PropertyForm.all.map{|p| p.token}
+    o = [(1..9), ('A'..'Z')].map(&:to_a).flatten
+    token = (0...10).map { o[rand(o.length)] }.join
+    while tokens.include?(token)
+      token = (0...10).map { o[rand(o.length)] }.join
+    end
+    return token
   end
 end
