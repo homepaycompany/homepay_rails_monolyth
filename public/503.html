@@ -199,16 +199,23 @@
       color: rgba(18, 117, 204, 1) !important;
     }
 
-
-
-
-    .border-button {
-      color: rgba(255, 255, 255, 1) !important;
-      border-color: rgba(255, 255, 255, 1) !important;
+    .btn {
+      color: white !important;
+      background: transparent !important;
+      font-size: 14px !important;
+      border: solid 1px white !important;
+      padding: 10px 15px !important;
+      border-radius: 6px !important;
+      font-weight: bold !important;
+      transition: all 0.3s ease !important;
     }
-    .button {
-      background-color: rgba(255, 255, 255, 1) !important;
-      color:  !important;
+    @media screen and (min-width: 485px) {
+      .btn:hover {
+        text-decoration: none !important;
+        background-color: white !important;
+        color: rgba(32, 232, 182, 1) !important;
+        border: solid 1px $green !important;
+      }
     }
 
 
