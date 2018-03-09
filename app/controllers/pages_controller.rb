@@ -14,6 +14,9 @@ class PagesController < ApplicationController
   def about_us
   end
 
+  def validation
+  end
+
   private
 
   def set_form
