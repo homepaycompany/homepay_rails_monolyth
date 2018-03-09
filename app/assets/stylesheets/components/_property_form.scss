@@ -11,8 +11,22 @@
   font-weight: bold;
   margin-bottom: 30px;
 }
-.form-body .form-section:last-child {
-  border-bottom: none;
+.form-body {
+  img {
+    max-width: 250px;
+    margin-bottom: 10px
+  }
+  a {
+    text-decoration: none;
+    color: $light-black;
+    transition: all ease 0.4s;
+    &:hover {
+      color: $green;
+    }
+  }
+  .form-section:last-child {
+    border-bottom: none;
+  }
 }
 .form-section {
   border-bottom: 1px solid $light-grey;
