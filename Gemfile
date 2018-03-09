@@ -28,6 +28,8 @@ gem 'postmark-rails'
 # Running Jobs on sidekiq
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
+# Admin interface with Forest
+gem 'forest_liana'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
