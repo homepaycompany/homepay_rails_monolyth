@@ -1,5 +1,5 @@
 <div class="form-field">
-  <span style="margin-right: 10px;"><%= t[:desc] %></span>
+  <p><%= t[:desc] %></p>
   <div class="form-input">
     <%= simple_form_for(@property_form, remote: true) do |f| %>
       <%= f.input t[:name], label: false,  placeholder: t[:unit], input_html: {class:'hidden js-no-validate'} %>
