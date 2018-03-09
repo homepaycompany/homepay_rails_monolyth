@@ -51,7 +51,7 @@
 }
 .form-wrong-input-format {
   font-size: 13px;
-  color: red;
+  color: $red;
 }
 .form-button {
   font-size: 20px;
@@ -124,5 +124,12 @@
   }
   .progress-bar-success {
     background-color: $green;
+  }
+}
+
+// MEDIA WIDTH RELATED STYLES
+@media(max-width: 768px) {
+  .progress-bar-container .progress-bar-success {
+    color: transparent;
   }
 }
