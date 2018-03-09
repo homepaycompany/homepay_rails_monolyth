@@ -116,6 +116,8 @@ class PropertyFormsController < ApplicationController
   def set_property_form
     if params[:token]
       @property_form = PropertyForm.find_by(token: params[:token])
+    else
+      @property_form = PropertyForm.find_by(id: params[:id])
     end
   end
 
