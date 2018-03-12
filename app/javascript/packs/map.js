@@ -8,3 +8,4 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   map.setZoom(16);
   map.setCenter(markers[0].lat, markers[0].lng);
 }
+
