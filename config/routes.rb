@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get "about" => 'pages#about_us'
   get "how-it-works" => 'pages#how_it_works'
 
+  # Static admin section to set admin cookie to exclude internal traffic
+  get "set_admin_cookie" => 'pages#set_admin_cookie'
+
   # Property form funnel routes
   resources :property_forms, only: [:show, :new, :create, :update, :destroy]
 
