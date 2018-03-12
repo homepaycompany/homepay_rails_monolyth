@@ -14,23 +14,10 @@
 
 .dropzone-btn {
   margin: 20px 0;
-  font-size: 15px;
-  padding: 5px 10px;
-  border-radius: 15px;
-  background-color: $green;
-  color: white;
-  box-shadow: 0 0 2px $light-grey;
-  &:hover {
-    cursor: pointer;
+  img {
+    max-width: 250px;
   }
-}
-
-// HOVER STYLES on PCs
-
-.dropzone-btn {
   &:hover {
-    box-shadow: 0 0 10px $light-grey;
-    background-color: $dark-green;
     cursor: pointer;
   }
 }
