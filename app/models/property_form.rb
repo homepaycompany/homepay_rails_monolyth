@@ -21,7 +21,7 @@ class PropertyForm < ApplicationRecord
             ]
     elsif self.property_type == 'appartment'
       a += [
-              { section: 2, name: 'appartment_floor', input_type: 'text', desc: 'Etage', validation_type: 'number', unit: 'nombre', icon: asset_url('form_size.svg') }
+              { section: 2, name: 'appartment_floor', input_type: 'text', desc: 'Etage', validation_type: 'number', unit: 'nombre', icon: asset_url('form_floor.svg') }
             ]
     end
     sections = [{id: 1, type: 'input_section'}, {id: 2, type: 'input_section'}, {id: 3, type: 'input_section'}]
@@ -56,7 +56,7 @@ class PropertyForm < ApplicationRecord
 
   def dsc_3_fields
     a = [
-          { section: 1, name: 'building_construction_year', input_type: 'text', desc: 'Année approximative de construction', validation_type: 'number', unit: 'année', icon: asset_url('form_size.svg') },
+          { section: 1, name: 'building_construction_year', input_type: 'text', desc: 'Année approximative de construction', validation_type: 'number', unit: 'année', icon: asset_url('form_build_year.svg') },
           { section: 3, name: 'property_state', input_type: 'state_box', desc: 'Etat général du bien', validation_type: 'string', values: ['Neuf', 'Bon', 'Moyen', 'Mauvais'], icon: asset_url('form_size.svg') },
           { section: 4, name: 'kitchen_state', input_type: 'state_box', desc: 'Etat de la cuisine', validation_type: 'string', values: ['Neuf', 'Bon', 'Moyen', 'Mauvais'], icon: asset_url('form_size.svg') },
           { section: 5, name: 'bathroom_state', input_type: 'state_box', desc: 'Etat de la salle de bain', validation_type: 'string', values: ['Neuf', 'Bon', 'Moyen', 'Mauvais'], icon: asset_url('form_size.svg') }
