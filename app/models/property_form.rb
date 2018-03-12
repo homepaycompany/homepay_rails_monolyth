@@ -73,10 +73,10 @@ class PropertyForm < ApplicationRecord
 
   def personnal_information_fields
     a = [
-          { section: 1, name: 'last_name', input_type: 'text', desc: 'Nom', validation_type: 'string', unit: 'Dupont', icon: asset_url('form_size.svg') },
-          { section: 1, name: 'first_name', input_type: 'text', desc: 'Prénom', validation_type: 'string', unit: 'Jean', icon: asset_url('form_size.svg') },
-          { section: 2, name: 'email', input_type: 'text', desc: 'Addresse email', validation_type: 'string', unit: 'jean.dupont@mail.com', icon: asset_url('form_size.svg') },
-          { section: 2, name: 'phone_number', input_type: 'text', desc: 'Téléphone', validation_type: 'string', icon: asset_url('form_size.svg') },
+          { section: 1, name: 'last_name', input_type: 'text', desc: 'Nom', validation_type: 'string', unit: 'Dupont', icon: asset_url('form_personal_info.svg') },
+          { section: 1, name: 'first_name', input_type: 'text', desc: 'Prénom', validation_type: 'string', unit: 'Jean', icon: asset_url('form_personal_info.svg') },
+          { section: 2, name: 'email', input_type: 'text', desc: 'Addresse email', validation_type: 'string', unit: 'jean.dupont@mail.com', icon: asset_url('form_email.svg') },
+          { section: 2, name: 'phone_number', input_type: 'text', desc: 'Téléphone', validation_type: 'string', icon: asset_url('form_phone.svg') },
           { section: 3, name: 'time_to_sell', input_type: 'state_box', desc: 'Vous souhaitez vendre dans :', validation_type: 'string', values: ['Moins d\'un mois', '1 à 2 mois', '2 à 3 mois', 'Plus de 3 mois'], icon: asset_url('form_size.svg') },
         ]
     sections = [{id: 1, type: 'input_section'}, {id: 2, type: 'input_section'}, {id: 3, type: 'input_section'}]
