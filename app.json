@@ -1,6 +1,7 @@
 {
   "name": "homepay_rails_monolyth",
   "scripts": {
+    "postdeploy":"rails db:migrate && rails db:seed"
   },
   "env": {
     "CLOUDINARY_URL": {
@@ -22,6 +23,12 @@
 
   ],
   "buildpacks": [
+    {
+      "url" : "heroku/nodejs"
+    },
+    {
+      "url" : "heroku/ruby"
+    }
 
   ]
 }
