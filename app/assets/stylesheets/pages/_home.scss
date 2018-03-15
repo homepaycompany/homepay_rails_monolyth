@@ -132,9 +132,35 @@
   }
 }
 
+.landing-model {
+  padding: 40px 0;
+  h2 {
+    color: $green;
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 0px;
+  }
+  .model-description {
+    margin-bottom: 40px;
+  }
+
+  .model-element-container {
+    padding: 20px;
+    .model-element {
+      padding: 0 20px;
+      span {
+        font-size: 50px;
+        font-weight: bolder;
+        color: $green;
+        text-align: center
+      }
+    }
+  }
+
+}
 
 .landing-contact {
-  background-color: $light-blue;
+  background-color: white;
   padding: 40px 0px;
   .container {
     width: 60%;
