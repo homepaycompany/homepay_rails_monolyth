@@ -9,11 +9,6 @@ import { waypoint } from '../shared/landing_page.js'
 import { validateAddress } from '../components/addressValidation'
 import { launchDropzone } from '../components/dropzone'
 
-// Javascript for autocomplete
-if (document.getElementById('real_estate_property_address')) {
-  autocomplete();
-}
-
 if (document.getElementById('go-back')) {
   goBack();
 }
@@ -39,9 +34,18 @@ if (document.getElementById('js-value-prop-sale')) {
   waypoint();
 }
 
-// JS for validating the address before creating a form
-if (document.getElementById('js-form-address')) {
-  validateAddress();
+// Do not launch JS for address autocomplete and address validation on Review apps, as Google
+// browser API restrictions don't allow them to use the API
+if (window.location.href.match(/homepay-rails-monolyth-st-pr-\d+/) == null) {
+  // Javascript for autocomplete
+  if (document.getElementById('real_estate_property_address')) {
+    autocomplete();
+  }
+
+  // JS for validating the address before creating a form
+  if (document.getElementById('js-form-address')) {
+    validateAddress();
+  }
 }
 
 // JS for launching dropzone
