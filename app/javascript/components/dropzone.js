@@ -37,13 +37,13 @@ function newDropzone() {
 }
 
 function disableNextSection () {
-  const b = document.getElementById('validate-section');
+  const b = document.getElementById('js-validate-section');
   b.classList.add('js-block-next-section');
   b.classList.add('disabled');
 }
 
 function enableNextSection () {
-  const b = document.getElementById('validate-section');
+  const b = document.getElementById('js-validate-section');
   b.innerHTML = "Continuer"
   // b.classList.remove('js-block-next-section');
   // b.classList.remove('disabled');

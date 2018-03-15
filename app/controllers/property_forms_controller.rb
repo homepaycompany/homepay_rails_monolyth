@@ -3,6 +3,19 @@ class PropertyFormsController < ApplicationController
   only: [:show,
     :update,
     :destroy,
+    :block_if_complete,
+    :a_address_validation,
+    :b_property_type_selection,
+    :c_description_1,
+    :d_description_2,
+    :e_description_3,
+    :f_add_images,
+    :g_personnal_information,
+    :h_confirmation,
+    :i_validation]
+
+    before_action :block_if_complete, only: [:show,
+    :update,
     :a_address_validation,
     :b_property_type_selection,
     :c_description_1,
@@ -166,5 +179,12 @@ class PropertyFormsController < ApplicationController
       token = (0...10).map { o[rand(o.length)] }.join
     end
     return token
+  end
+
+  def block_if_complete
+    if @property_form.complete
+      flash[:alert] = "Ce formulaire est finalisé et ne peut être édité"
+      redirect_to root_path
+    end
   end
 end
