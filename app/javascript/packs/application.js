@@ -9,11 +9,11 @@ import { waypoint } from '../shared/landing_page.js'
 import { validateAddress } from '../components/addressValidation'
 import { launchDropzone } from '../components/dropzone'
 
-if (document.getElementById('go-back')) {
+if (document.getElementById('js-go-back')) {
   goBack();
 }
 
-if (document.getElementById('validate-section')) {
+if (document.getElementById('js-validate-section')) {
   formSectionValidation()
 }
 
