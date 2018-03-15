@@ -14,11 +14,11 @@ if (document.getElementById('real_estate_property_address')) {
   autocomplete();
 }
 
-if (document.getElementById('go-back')) {
+if (document.getElementById('js-go-back')) {
   goBack();
 }
 
-if (document.getElementById('validate-section')) {
+if (document.getElementById('js-validate-section')) {
   formSectionValidation()
 }
 

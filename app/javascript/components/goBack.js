@@ -1,5 +1,5 @@
 function goBack() {
-  document.getElementById('go-back').addEventListener('click', (e) => {
+  document.getElementById('js-go-back').addEventListener('click', (e) => {
     window.history.back();
   })
 }
