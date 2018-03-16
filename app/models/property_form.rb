@@ -9,9 +9,9 @@ class PropertyForm < ApplicationRecord
   def dsc_1_fields
     a = [
           { section: 1, name: 'livable_size_sqm', input_type: 'text', desc: 'Surface habitable', validation_type: 'number', unit: 'm2', icon: asset_url('form_size.svg') },
-          { section: 3, name: 'num_rooms', input_type: 'text', desc: 'Pièces', validation_type: 'number', unit: 'nombre', icon: asset_url('form_rooms.svg') },
-          { section: 3, name: 'num_bedrooms', input_type: 'text', desc: 'Chambres', validation_type: 'number', unit: 'nombre', icon: asset_url('form_bedrooms.svg') },
-          { section: 3, name: 'num_bathrooms', input_type: 'text', desc: 'Salles de bain', validation_type: 'number', unit: 'nombre', icon: asset_url('form_bathrooms.svg') }
+          { section: 3, name: 'num_rooms', input_type: 'text', desc: 'Nb de pièces', validation_type: 'number', unit: 'nombre', icon: asset_url('form_rooms.svg') },
+          { section: 3, name: 'num_bedrooms', input_type: 'text', desc: 'Nb de chambres', validation_type: 'number', unit: 'nombre', icon: asset_url('form_bedrooms.svg') },
+          { section: 3, name: 'num_bathrooms', input_type: 'text', desc: 'Nb de salles de bain', validation_type: 'number', unit: 'nombre', icon: asset_url('form_bathrooms.svg') }
         ]
     if self.property_type == 'house'
       a += [
@@ -73,8 +73,8 @@ class PropertyForm < ApplicationRecord
 
   def personnal_information_fields
     a = [
-          { section: 1, name: 'last_name', input_type: 'text', desc: 'Nom', validation_type: 'string', unit: 'Dupont', icon: asset_url('form_personal_info.svg') },
           { section: 1, name: 'first_name', input_type: 'text', desc: 'Prénom', validation_type: 'string', unit: 'Jean', icon: asset_url('form_personal_info.svg') },
+          { section: 1, name: 'last_name', input_type: 'text', desc: 'Nom', validation_type: 'string', unit: 'Dupont', icon: asset_url('form_personal_info.svg') },
           { section: 2, name: 'email', input_type: 'text', desc: 'Addresse email', validation_type: 'string', unit: 'jean.dupont@mail.com', icon: asset_url('form_email.svg') },
           { section: 2, name: 'phone_number', input_type: 'text', desc: 'Téléphone', validation_type: 'string', icon: asset_url('form_phone.svg') },
           { section: 3, name: 'time_to_sell', input_type: 'state_box', desc: 'Vous souhaitez vendre dans :', validation_type: 'string', values: ['Moins d\'un mois', '1 à 2 mois', '2 à 3 mois', 'Plus de 3 mois'], icon: asset_url('form_size.svg') },
