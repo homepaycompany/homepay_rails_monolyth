@@ -26,8 +26,7 @@ class PropertyFormsController < ApplicationController
     :h_confirmation,
     :i_validation]
 
-  # CRUD ACTIONS
-
+  # CRUD actions
   def show
   end
 

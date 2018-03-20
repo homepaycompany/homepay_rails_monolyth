@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   # Static admin section to set admin cookie to exclude internal traffic
   get "faq/:title", to: 'faqs#show'
-
+  get "faqs", to: "faqs#index"
 
   # Property image routes to create or delete an image
   resources :property_images, only: [:create]
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   # Sidekiq Web UI, only for admins.
   require "sidekiq/web"
   authenticate :user, lambda { |u| u.admin } do
-    mount Sidekiq::Web, to: '/sidekiq'
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

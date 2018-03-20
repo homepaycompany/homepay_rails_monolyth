@@ -189,44 +189,23 @@
     <div class="container">
       <div class="row">
         <h2 class="text-center">Questions fréquentes</h2>
-        <div class="col-xs-12">
-          <div class="question-wrapper">
-            <p>
-              Is there a fee to request offers?
-            </p>
-            <i class="fas fa-chevron-down"></i>
+        <% @faqs.each do |faq| %>
+          <div class="col-xs-12">
+            <div class="question-wrapper">
+              <p>
+                <%= faq.question %>
+              </p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="answer-wrapper">
+              <p>
+                <%= faq.answer %>
+              </p>
+            </div>
           </div>
-          <div class="answer-wrapper">
-            <p>
-              There is no cost to request or receive Zillow Instant Offers and a professional home valuation. If you choose an investor offer, you will receive a clear statement outlining any fees associated with the offer you select.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="question-wrapper">
-            <p>
-              I'm not ready to commit – can I still get offers?
-            </p>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer-wrapper">
-            <p>
-              You do not have to sign any agreements or make any commitments to request Zillow Instant Offers for your home. After submitting a request, you can accept one of the offers and sell your home, you can list with an agent or you can decide not to sell at this time. It is completely up to you.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="question-wrapper">
-            <p>
-              Who is offering to buy my house?
-            </p>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="answer-wrapper">
-            <p>
-              Our buyers are reputable professionals with extensive local market knowledge. They are pre-screened investors and corporate buyers who are invited to participate in Zillow Instant Offers based on experience, offer quality and customer service.
-            </p>
-          </div>
+        <% end %>
+        <div class="text-center">
+          <%= link_to "Autres questions fréquentes", faqs_path, class: "btn" %>
         </div>
       </div>
     </div>
