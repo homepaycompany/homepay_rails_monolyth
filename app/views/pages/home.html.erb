@@ -191,13 +191,13 @@
         <h2 class="text-center">Questions fréquentes</h2>
         <% @faqs.each do |faq| %>
           <div class="col-xs-12">
-            <div class="question-wrapper">
+            <div class="question-wrapper" id="js-faq-question" data-question="<%= faq.id %>">
               <p>
                 <%= faq.question %>
               </p>
               <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="answer-wrapper">
+            <div class="answer-wrapper hidden" id="js-faq-answer" data-answer="<%= faq.id %>">
               <p>
                 <%= faq.answer %>
               </p>
