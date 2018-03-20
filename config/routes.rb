@@ -6,12 +6,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # Static pages : landing, how-it-works, about etc.
-  get "home" => 'pages#landing_liquidity'
-  get "about" => 'pages#about_us'
-  get "how-it-works" => 'pages#how_it_works'
+  get "home", to: 'pages#landing_liquidity'
+  get "about", to: 'pages#about_us'
+  get "how-it-works", to: 'pages#how_it_works'
 
   # Static admin section to set admin cookie to exclude internal traffic
-  get "set_admin_cookie" => 'pages#set_admin_cookie'
+  get "set_admin_cookie", to: 'pages#set_admin_cookie'
 
   # Property form funnel routes
   resources :property_forms, only: [:show, :new, :create, :update, :destroy]
@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get "seller/:token/personnal_information", to: "property_forms#g_personnal_information", as: :form_step_7
   get "seller/:token/confirmation", to: "property_forms#h_confirmation", as: :form_step_8
   get "seller/:token/validation", to: "property_forms#i_validation", as: :form_step_9
+
+  # Static admin section to set admin cookie to exclude internal traffic
+  get "faqs", to: "faqs#index"
 
   # Property image routes to create or delete an image
   resources :property_images, only: [:create]

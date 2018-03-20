@@ -5,5 +5,4 @@ class PropertyImagesControllerTest < ActionDispatch::IntegrationTest
     get property_images_create_url
     assert_response :success
   end
-
 end

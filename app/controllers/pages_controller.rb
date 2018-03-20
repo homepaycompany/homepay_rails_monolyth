@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   before_action :authenticate_admin!, only: [:set_admin_cookie]
 
   def home
+    @faqs = Faq.all
   end
 
   def landing_liquidity
