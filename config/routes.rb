@@ -27,7 +27,6 @@ Rails.application.routes.draw do
   get "seller/:token/validation", to: "property_forms#i_validation", as: :form_step_9
 
   # Static admin section to set admin cookie to exclude internal traffic
-  get "faq/:title", to: 'faqs#show'
   get "faqs", to: "faqs#index"
 
   # Property image routes to create or delete an image
