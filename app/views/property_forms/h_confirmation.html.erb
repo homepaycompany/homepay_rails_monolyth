@@ -21,6 +21,6 @@
   </div>
 </div>
 
-<%= link_to form_step_9_path(@property_form.token), method: :get, :data => {:confirm => 'Une fois finalisé vous ne pourrez plus éditer le formulaire. Confirmez-vous ?'} do %>
+<%= link_to form_step_9_path(@property_form.token), method: :get do %>
   <div class="btn hidden" id="move-to-next-section"></div>
 <% end %>
