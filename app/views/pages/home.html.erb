@@ -185,31 +185,33 @@
     </div>
   </div>
 
-  <div class="landing-faq">
-    <div class="container">
-      <div class="row">
-        <h2 class="text-center">Questions fréquentes</h2>
-        <% @faqs.each do |faq| %>
-          <div class="col-xs-12">
-            <div class="question-wrapper" id="js-faq-question" data-question="<%= faq.id %>">
-              <p>
-                <%= faq.question %>
-              </p>
-              <i class="fas fa-chevron-down"></i>
+  <% if @faqs.length > 0  %>
+    <div class="landing-faq">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">Questions fréquentes</h2>
+          <% @faqs.each do |faq| %>
+            <div class="col-xs-12">
+              <div class="question-wrapper" id="js-faq-question" data-question="<%= faq.id %>">
+                <p>
+                  <%= faq.question %>
+                </p>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="answer-wrapper hidden" id="js-faq-answer" data-answer="<%= faq.id %>">
+                <p>
+                  <%= faq.answer %>
+                </p>
+              </div>
             </div>
-            <div class="answer-wrapper hidden" id="js-faq-answer" data-answer="<%= faq.id %>">
-              <p>
-                <%= faq.answer %>
-              </p>
-            </div>
+          <% end %>
+          <div class="text-center">
+            <%= link_to "Autres questions fréquentes", faqs_path, class: "btn" %>
           </div>
-        <% end %>
-        <div class="text-center">
-          <%= link_to "Autres questions fréquentes", faqs_path, class: "btn" %>
         </div>
       </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="landing-contact text-center">
     <div class="container">
