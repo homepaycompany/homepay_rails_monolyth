@@ -8,6 +8,7 @@ class FaqsController < ApplicationController
 
   def index
     @faqs = Faq.all
+    @topics = {general: "Général", seller: "Vente", offer: "Offres d'achat"}
   end
 
   private

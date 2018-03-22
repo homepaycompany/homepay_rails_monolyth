@@ -7,7 +7,7 @@ import { addBooleanToForm } from '../shared/formCheckBoolean'
 import { addStateToForm } from '../shared/formCheckStateBox'
 import { validateAddress } from '../shared/addressValidation'
 import { launchDropzone } from '../shared/dropzone'
-import { toggleFaq } from '../shared/faq'
+import { toggleFaq, faqSection } from '../shared/faq'
 
 if (document.getElementById('js-go-back')) {
   goBack();
@@ -29,9 +29,13 @@ if (document.getElementById('js-form-state-box')) {
   addStateToForm();
 }
 
-// JS for FAQ toggle
+// JS to open the answer related to a specific question in FAQ
 if (document.getElementById('js-faq-question')) {
   toggleFaq();
+}
+// JS to open the answer related to a specific topic in FAQ
+if (document.querySelector('.faq-wrapper')) {
+  faqSection();
 }
 
 
