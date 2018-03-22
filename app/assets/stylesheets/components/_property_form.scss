@@ -35,6 +35,9 @@
 .form-field {
   margin-left: 10px;
   margin-bottom: 10px;
+  p {
+    font-size: 15px;
+  }
   &:first-child {
     margin-left: 0px;
   }
@@ -95,6 +98,27 @@
     background-color: $green;
     border-color: $green;
     color: white;
+  }
+}
+.disclaimer {
+  padding: 10px;
+  background-color: rgba(32, 232, 182, 0.1);
+  border-radius: 5px;
+  p {
+      margin: 0;
+      font-size: 15px;
+  }
+  .disclaimer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      text-align: left;
+    }
+  }
+  .disclaimer-icon {
+    width: 50px;
+    margin: 10px;
   }
 }
 

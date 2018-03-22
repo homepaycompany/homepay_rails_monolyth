@@ -32,7 +32,7 @@ function validateFields() {
     } else if (f.classList.contains('js-no-validate')) {
       i = i && true
     } else {
-      f.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML('beforeEnd', `<div class='form-wrong-input-format'>Veuillez saisir un nombre<div>`)
+      f.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML('beforeEnd', `<div class='form-wrong-input-format'>Format incorrect<div>`)
       i = i && false
     }
   })

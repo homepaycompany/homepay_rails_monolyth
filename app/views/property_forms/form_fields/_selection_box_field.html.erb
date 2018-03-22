@@ -3,7 +3,7 @@
   data-name="<%= t[:name] %>"
   data-selected="<%= @property_form.send t[:name].to_sym %>"
   <%= "data-reveal=js-property-form-#{t[:connected_field]}" if t[:connected_field] %>>
-  <p><%= t[:desc] %></p>
+  <p><strong><%= t[:desc] %></strong></p>
 </div>
 <div class="hidden">
   <%= simple_form_for(@property_form, remote: true) do |f| %>
