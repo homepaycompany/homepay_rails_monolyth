@@ -4,32 +4,13 @@
       <div class="row">
         <h2 class="text-center">Questions fréquentes</h2>
         <div class="faq-values">
-          <h3 class="active" data-faq="all">Tout</h3>
-          <% @topics.each do |k,v| %>
-            <h3 data-faq="<%= k %>"><%= v %></h3>
+          <% @topics.each_with_index do |(k,v), i| %>
+            <h3 class="<%= "active" if i == 0 %>" data-faq="<%= k %>"><%= v %></h3>
           <% end %>
         </div>
 
-        <div class="faq-wrapper faq-wrapper-active" data-faq="all">
-          <% @faqs.each do |faq| %>
-            <div class="col-xs-12">
-              <div class="question-wrapper" id="js-faq-question" data-question="<%= faq.id %>">
-                <p>
-                  <%= faq.question %>
-                </p>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="answer-wrapper hidden" id="js-faq-answer" data-answer="<%= faq.id %>">
-                <p>
-                  <%= faq.answer %>
-                </p>
-              </div>
-            </div>
-          <% end %>
-        </div>
-
-        <% @topics.each do |k,v| %>
-          <div class="faq-wrapper" data-faq="<%= k %>">
+        <% @topics.each_with_index do |(k,v), i| %>
+          <div class="faq-wrapper <%= "faq-wrapper-active" if i == 0 %>" data-faq="<%= k %>">
             <% @faqs.where(topic: k).each do |faq| %>
               <div class="col-xs-12">
                 <div class="question-wrapper" id="js-faq-question" data-question="<%= faq.id %>">
