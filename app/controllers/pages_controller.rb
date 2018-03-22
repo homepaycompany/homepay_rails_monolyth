@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def home
     @faqs = Faq.all
+    @landing = params["landing"] || 'home'
   end
 
   def landing_liquidity
