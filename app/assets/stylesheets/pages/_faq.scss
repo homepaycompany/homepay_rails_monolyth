@@ -17,6 +17,30 @@
     color: $light-black;
     font-size: 16px;
   }
+  .faq-values {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px;
+    h3 {
+      transition: all 0.3s ease;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin: 0 20px;
+      cursor: pointer;
+    }
+    .active {
+      color: $green;
+      border: none;
+    }
+  }
+  .faq-wrapper {
+    display: none;
+  }
+  .faq-wrapper-active {
+    display: initial;
+  }
   .question-wrapper {
     font-weight: bold;
     margin: 20px 0px;
