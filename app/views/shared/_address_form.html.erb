@@ -4,7 +4,27 @@
       <i class="fas fa-map-marker-alt marker"></i>
       <%= f.input :address, label: false, input_html: { id: "real_estate_property_address", placeholder: "Indiquez l'adresse" } %>
     </div>
-    <%= f.submit "Demandez votre offre d'achat", class: "form-submit border-green visible-md visible-lg visible-xl" %>
-    <%= f.submit "Je vends", class: "form-submit border-green visible-xs visible-sm" %>
+    <% if @landing == 'home' %>
+      <%= f.submit "Je demande mes offres d'achat", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "Je vends", class: "form-submit border-green visible-xs visible-sm" %>
+    <% elsif @landing == 'simple' %>
+      <%= f.submit "Je vends sans stress !", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "Hop!", class: "form-submit border-green visible-xs visible-sm" %>
+    <% elsif @landing == 'risk_free' %>
+      <%= f.submit "Je demande mes offres fermes", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "C'est parti", class: "form-submit border-green visible-xs visible-sm" %>
+    <% elsif @landing == 'fast' %>
+      <%= f.submit "Mes offres et vite !", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "C'est parti", class: "form-submit border-green visible-xs visible-sm" %>
+    <% elsif @landing == 'select_buyers' %>
+      <%= f.submit "Je demande mes offres qualifiées", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "Je vends", class: "form-submit border-green visible-xs visible-sm" %>
+    <% elsif @landing == 'value_your_home' %>
+      <%= f.submit "J'évalue mon bien", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "Evaluer", class: "form-submit border-green visible-xs visible-sm" %>
+    <% elsif @landing == 'dont_pay' %>
+      <%= f.submit "Je demande mes offres d'achat", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "Je vends", class: "form-submit border-green visible-xs visible-sm" %>
+    <% end %>
   <% end %>
 </div>
