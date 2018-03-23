@@ -11,7 +11,7 @@
 
         <% @topics.each_with_index do |(k,v), i| %>
           <div class="faq-wrapper <%= "faq-wrapper-active" if i == 0 %>" data-faq="<%= k %>">
-            <% @faqs.where(topic: k).each do |faq| %>
+            <% @faqs.where(topic: k).order(:id).each do |faq| %>
               <div class="col-xs-12">
                 <div class="question-wrapper" id="js-faq-question" data-question="<%= faq.id %>">
                   <p>

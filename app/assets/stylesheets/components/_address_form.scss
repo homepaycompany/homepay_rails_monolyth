@@ -20,6 +20,9 @@
     &.border-green input {
       border-color: $green;
     }
+    .marker {
+      color: $green;
+    }
   }
   .form-submit {
     flex: 1;
