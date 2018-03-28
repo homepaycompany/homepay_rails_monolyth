@@ -25,6 +25,9 @@
     <% elsif @landing == 'dont_pay' %>
       <%= f.submit "Je demande mes offres d'achat", class: "form-submit border-green visible-md visible-lg visible-xl" %>
       <%= f.submit "Je vends", class: "form-submit border-green visible-xs visible-sm" %>
+    <% else %>
+      <%= f.submit "Je demande mes offres d'achat", class: "form-submit border-green visible-md visible-lg visible-xl" %>
+      <%= f.submit "Je vends", class: "form-submit border-green visible-xs visible-sm" %>
     <% end %>
   <% end %>
 </div>
