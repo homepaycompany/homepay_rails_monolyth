@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   before_action :authenticate_admin!, only: [:set_admin_cookie]
 
   def home
-    @landing = params["landing"] || 'home'
+    @landing = params["landing"] || 'risk_free'
     @faqs = []
     # @faqs << Faq.find_by(question: "Est-ce que je peux demander une demande d'offre d’achat gratuitement sur Homepay ?")
     # @faqs << Faq.find_by(question: "Je ne suis pas sûr de vouloir m’engager. Est-ce que je peux quand même demander une offre d’achat ?")
