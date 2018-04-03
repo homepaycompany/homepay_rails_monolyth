@@ -40,6 +40,10 @@
   <div class="btn hidden" id="move-to-next-section"></div>
 <% end %>
 
+<%= link_to form_step_5_path(@property_form.token), method: :get do %>
+  <div class="btn hidden" id="js-move-to-previous-section"></div>
+<% end %>
+
 <!-- HTML TEMPLATE FOR DROPZONE PASSED WITH JS -->
 <div class="dropzone-preview-container hidden" id="tpl">
   <div class="dz-preview dz-file-preview dropzone-image-card">

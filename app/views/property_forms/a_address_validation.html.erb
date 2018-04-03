@@ -19,3 +19,7 @@
 <%= link_to form_step_2_path(@property_form.token), method: :get do %>
   <div class="btn hidden" id="move-to-next-section"></div>
 <% end %>
+
+<%= link_to root_path, method: :get do %>
+  <div class="btn hidden" id="js-move-to-previous-section"></div>
+<% end %>

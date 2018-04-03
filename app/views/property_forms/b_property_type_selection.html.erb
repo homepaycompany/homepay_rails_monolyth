@@ -28,3 +28,7 @@
     </div>
   </div>
 </div>
+
+<%= link_to form_step_1_path(@property_form.token), method: :get do %>
+  <div class="btn hidden" id="js-move-to-previous-section"></div>
+<% end %>

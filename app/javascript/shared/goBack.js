@@ -1,6 +1,6 @@
 function goBack() {
   document.getElementById('js-go-back').addEventListener('click', (e) => {
-    window.history.back();
+    document.getElementById('js-move-to-previous-section').click()
   })
 }
 
