@@ -13,6 +13,8 @@
 }
 
 .dropzone-btn {
+  border: solid 1px #DEF7F1;
+  border-radius: 6px;
   img {
     margin: 20px 0 0 0;
     max-width: 250px;
@@ -28,6 +30,7 @@
   }
   &:hover {
     cursor: pointer;
+    border: solid 1px $green;
     img {
       opacity: 1;
     }
