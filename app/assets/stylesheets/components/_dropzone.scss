@@ -13,11 +13,26 @@
 }
 
 .dropzone-btn {
-  margin: 20px 0;
   img {
+    margin: 20px 0 0 0;
     max-width: 250px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+  p {
+    margin: 10px 0 20px 0;
+    color: $green;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
   }
   &:hover {
     cursor: pointer;
+    img {
+      opacity: 1;
+    }
+    p {
+      color: $dark-green;
+    }
   }
 }
