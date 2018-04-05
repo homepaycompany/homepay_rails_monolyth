@@ -15,6 +15,13 @@ class PropertyImagesController < ApplicationController
     end
   end
 
+  def destroy
+    @image = PropertyImage.find(params[:id])
+    @image.destroy
+    @property_form = PropertyForm.find_by(token: params[:property_form_id])
+    redirect_to form_step_6_path(@property_form.token)
+  end
+
   private
 
   def set_property_form

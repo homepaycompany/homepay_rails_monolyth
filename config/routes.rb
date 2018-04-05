@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get "faqs", to: "faqs#index"
 
   # Property image routes to create or delete an image
-  resources :property_images, only: [:create]
+  resources :property_images, only: [:create, :destroy]
 
   # Sidekiq Web UI, only for admins.
   require "sidekiq/web"
