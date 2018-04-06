@@ -17,29 +17,33 @@ function newDropzone() {
     previewTemplate: document.querySelector('#tpl').innerHTML,
     addRemoveLinks: true,
     dictCancelUpload: "Supprimer",
+    dictRemoveFile: "Supprimer",
     dictCancelUploadConfirmation: "Êtes-vous sûr de vouloir supprimer l'image ?",
     // If the upload was successful
     success: function(file, response){
-        // Find the remove button link of the uploaded file and give it an id
+        // Find the preview and the remove button link of the uploaded file and give it an id
         // based of the fileID response from the server
+        file.previewTemplate.dataset.token = response.id;
         file.previewTemplate.querySelector(".dz-remove").id = response.id;
     },
     // When the remove button is clicked
     removedfile: function(file){
-      // Grap the id of the uploaded file we set earlier
+      // Grab id of uploaded property picture
       var id = file.previewTemplate.querySelector(".dz-remove").id;
       var formToken = document.querySelector('.form-container').dataset.token;
-      console.log(formToken);
-      // Delete ajax request to delete the file
+
+      // Ajax request to delete the file
       $.ajax({
         type: 'DELETE',
         url: '/property_images/' + id,
         data: {property_form_id: formToken},
+        dataType: "script",
         success: function(file){
-          // Delete preview
-          var preview = file.previewTemplate.querySelector(".dz-remove");
+          // Delete property image  preview
+          var preview = document.querySelector(`.dz-preview[data-token="${id}"]`);
           preview.parentNode.removeChild(preview);
-          console.log("Deleted picture");
+          console.log("In Ajax request");
+          console.log("Removed file");
         }
       });
     },

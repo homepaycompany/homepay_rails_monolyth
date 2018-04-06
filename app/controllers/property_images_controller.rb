@@ -19,12 +19,10 @@ class PropertyImagesController < ApplicationController
   def destroy
     @image = PropertyImage.find(params[:id])
     @property_form = PropertyForm.find_by(token: params[:property_form_id])
-    if @image.destroy
-      respond_to do |format|
-        format.html { redirect_to form_step_6_path(@property_form.token) }
-        format.js
-      end
-    else
+    @image.destroy
+    respond_to do |format|
+      format.html { redirect_to form_step_6_path(@property_form.token) }
+      format.js
     end
   end
 
