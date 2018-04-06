@@ -89,7 +89,7 @@
   padding: 15px;
 }
 .form-selection-box {
-  height: 80px;
+  height: 200px;
   margin-bottom: 5px;
   display: flex;
   justify-content: space-around;
@@ -98,10 +98,12 @@
   background-color: $light-grey;
   border: 1px solid white;
   border-radius: 5px;
-  &.active {
-    background-color: $green;
+  opacity: 0.4;
+  transition: all ease 0.4s;
+  &.active, &:hover {
     border-color: $green;
-    color: white;
+    color: $black;
+    opacity: 1;
   }
 }
 

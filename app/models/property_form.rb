@@ -30,23 +30,23 @@ class PropertyForm < ApplicationRecord
 
   def dsc_2_fields
     a = [
-          { section: 1, name: 'has_terrace', input_type: 'selection_box', desc: 'Terrasse', validation_type: 'boolean', connected_field: 'size_terrace_sqm', icon: asset_url('form_size.svg') },
-          { section: 1, name: 'has_cellar', input_type: 'selection_box', desc: 'Cave', validation_type: 'boolean', connected_field: 'size_cellar_sqm', icon: asset_url('form_size.svg') },
+          { section: 1, name: 'has_terrace', input_type: 'selection_box', desc: 'Terrasse', validation_type: 'boolean', connected_field: 'size_terrace_sqm', icon: asset_url('form_terrace.svg') },
+          { section: 1, name: 'has_cellar', input_type: 'selection_box', desc: 'Cave', validation_type: 'boolean', connected_field: 'size_cellar_sqm', icon: asset_url('form_cellar.svg') },
           { section: 2, name: 'size_terrace_sqm', input_type: 'text', desc: 'Surface de la terrasse', validation_type: 'number', unit: 'm2', icon: asset_url('form_size.svg') },
           { section: 2, name: 'size_cellar_sqm', input_type: 'text', desc: 'Surface de la cave', validation_type: 'number', unit: 'm2', icon: asset_url('form_size.svg') }
         ]
     if self.property_type == 'house'
       a += [
-            { section: 1, name: 'has_garage', input_type: 'selection_box', desc: 'Garage', validation_type: 'boolean', icon: asset_url('form_size.svg') },
-            { section: 1, name: 'has_pool', input_type: 'selection_box', desc: 'Piscine', validation_type: 'boolean', icon: asset_url('form_size.svg') },
-            { section: 1, name: 'has_attic', input_type: 'selection_box', desc: 'Combles', validation_type: 'boolean', connected_field: 'is_attic_convertible', icon: asset_url('form_size.svg') },
+            { section: 1, name: 'has_garage', input_type: 'selection_box', desc: 'Garage', validation_type: 'boolean', icon: asset_url('form_parking.svg') },
+            { section: 1, name: 'has_pool', input_type: 'selection_box', desc: 'Piscine', validation_type: 'boolean', icon: asset_url('form_pool.svg') },
+            { section: 1, name: 'has_attic', input_type: 'selection_box', desc: 'Combles', validation_type: 'boolean', connected_field: 'is_attic_convertible', icon: asset_url('form_attic.svg') },
             { section: 2, name: 'is_attic_convertible', input_type: 'boolean', desc: 'Les combles sont-elles aménageables ?', validation_type: 'boolean', icon: asset_url('form_size.svg') }
             ]
     elsif self.property_type == 'appartment'
       a += [
-              { section: 1, name: 'has_elevator', input_type: 'selection_box', desc: 'Ascenseur', validation_type: 'boolean', icon: asset_url('form_size.svg') },
-              { section: 1, name: 'has_parking', input_type: 'selection_box', desc: 'Parking', validation_type: 'boolean', icon: asset_url('form_size.svg') },
-              { section: 1, name: 'has_balcony', input_type: 'selection_box', desc: 'Balcon', validation_type: 'boolean', connected_field: 'size_balcony_sqm', icon: asset_url('form_size.svg') },
+              { section: 1, name: 'has_elevator', input_type: 'selection_box', desc: 'Ascenseur', validation_type: 'boolean', icon: asset_url('form_elevator.svg') },
+              { section: 1, name: 'has_parking', input_type: 'selection_box', desc: 'Parking', validation_type: 'boolean', icon: asset_url('form_parking.svg') },
+              { section: 1, name: 'has_balcony', input_type: 'selection_box', desc: 'Balcon', validation_type: 'boolean', connected_field: 'size_balcony_sqm', icon: asset_url('form_balcony.svg') },
               { section: 2, name: 'size_balcony_sqm', input_type: 'text', desc: 'Surface du balcon', validation_type: 'number', unit: 'm2', icon: asset_url('form_size.svg') }
             ]
     end

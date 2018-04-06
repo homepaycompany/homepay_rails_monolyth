@@ -1,0 +1,74 @@
+<svg width="677" height="379" viewBox="0 0 677 379" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>form_pool</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(97 -4576)">
+<g id="form_pool">
+<g id="Mask Group">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle">
+<use xlink:href="#path0_fill" transform="translate(-97 4576)" fill="#DFF7F1"/>
+</g>
+</mask>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path0_fill" transform="translate(-97 4576)" fill="#DFF7F1"/>
+</g>
+<g id="Rectangle 2.1" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="translate(-91.5 4471.5)" fill="#FFFFFF"/>
+<mask id="mask1_outline_out">
+<rect id="mask1_outline_inv" fill="white" x="-3" y="-2" width="992" height="500" transform="translate(-91.5 4471.5)"/>
+<use xlink:href="#path1_fill" fill="black" transform="translate(-91.5 4471.5)"/>
+</mask>
+<g mask="url(#mask1_outline_out)">
+<use xlink:href="#path2_stroke_2x" transform="translate(-91.5 4471.5)" fill="#81F7DA"/>
+</g>
+</g>
+<g id="Rectangle 2" mask="url(#mask0_alpha)">
+<use xlink:href="#path3_fill" transform="translate(-60.5 4472.5)" fill="#E8F7FF"/>
+<mask id="mask2_outline_out">
+<rect id="mask2_outline_inv" fill="white" x="-5" y="-3" width="972" height="485" transform="translate(-60.5 4472.5)"/>
+<use xlink:href="#path3_fill" fill="black" transform="translate(-60.5 4472.5)"/>
+</mask>
+<g mask="url(#mask2_outline_out)">
+<use xlink:href="#path4_stroke_2x" transform="translate(-60.5 4472.5)" fill="#DEF3FF"/>
+</g>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path5_fill" transform="translate(-60.5 4700.32)" fill="#D6F1FF"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path6_fill" transform="translate(72 4774.5)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path7_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#70FFDA"/>
+<use xlink:href="#path8_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#70FFDA"/>
+<use xlink:href="#path9_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#70FFDA"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path10_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#20E8B6"/>
+<use xlink:href="#path11_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#20E8B6"/>
+<use xlink:href="#path12_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#20E8B6"/>
+<use xlink:href="#path13_fill" transform="matrix(0.844392 -0.535726 0.535726 0.844392 60.7673 4827.08)" fill="#20E8B6"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path6_fill" transform="translate(120 4798.5)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 20C 0 8.95431 8.95431 0 20 0L 657 0C 668.046 0 677 8.95431 677 20L 677 359C 677 370.046 668.046 379 657 379L 20 379C 8.95431 379 0 370.046 0 359L 0 20Z"/>
+<path id="path1_fill" d="M 0 268.5L 622 0L 986.5 255.5L 417 496L 0 268.5Z"/>
+<path id="path2_stroke_2x" d="M 0 268.5L -0.396323 267.582L -2.28024 268.395L -0.478926 269.378L 0 268.5ZM 622 0L 622.574 -0.818862L 622.117 -1.13951L 621.604 -0.918111L 622 0ZM 986.5 255.5L 986.889 256.421L 988.554 255.718L 987.074 254.681L 986.5 255.5ZM 417 496L 416.521 496.878L 416.945 497.109L 417.389 496.921L 417 496ZM 0.396323 269.418L 622.396 0.918111L 621.604 -0.918111L -0.396323 267.582L 0.396323 269.418ZM 621.426 0.818862L 985.926 256.319L 987.074 254.681L 622.574 -0.818862L 621.426 0.818862ZM 986.111 254.579L 416.611 495.079L 417.389 496.921L 986.889 256.421L 986.111 254.579ZM 417.479 495.122L 0.478926 267.622L -0.478926 269.378L 416.521 496.878L 417.479 495.122Z"/>
+<path id="path3_fill" d="M 0 268.5L 622 0L 962.5 243.5L 388 479.5L 0 268.5Z"/>
+<path id="path4_stroke_2x" d="M 0 268.5L -0.792646 266.664L -4.56694 268.293L -0.955483 270.257L 0 268.5ZM 622 0L 623.163 -1.62682L 622.245 -2.28393L 621.207 -1.83622L 622 0ZM 962.5 243.5L 963.26 245.35L 966.604 243.976L 963.663 241.873L 962.5 243.5ZM 388 479.5L 387.045 481.257L 387.88 481.711L 388.76 481.35L 388 479.5ZM 0.792646 270.336L 622.793 1.83622L 621.207 -1.83622L -0.792646 266.664L 0.792646 270.336ZM 620.837 1.62682L 961.337 245.127L 963.663 241.873L 623.163 -1.62682L 620.837 1.62682ZM 961.74 241.65L 387.24 477.65L 388.76 481.35L 963.26 245.35L 961.74 241.65ZM 388.955 477.743L 0.955483 266.743L -0.955483 270.257L 387.045 481.257L 388.955 477.743Z"/>
+<path id="path5_fill" d="M 0 40.6763C 76.0501 14.298 165 -34.3237 209 37.6763C 253 109.676 303.198 124.585 344.5 140.676C 385.802 156.767 395.525 209.791 333 221.676L 0 40.6763Z"/>
+<path id="path6_fill" d="M 4 7.5L 4 69.5C 2.41817 70.117 1.54165 70.1395 0 69.5L 0 4C 0.696727 2.10323 1.40984 1.1645 4 0L 43 3C 45.3689 4.54614 46.2089 5.5408 47 7.5C 47.8454 9.20418 47.735 14.9258 47 16.5L 27.5 44L 27.5 59.5C 25.9088 60.1293 25.0331 60.1287 23.5 59.5L 23.5 42L 42.5 16C 43.0075 14.3907 43.2443 13.3761 43 10C 42.2683 8.27113 41.4812 7.9466 40 7.5L 5.5 5C 4.34103 5.4736 3.9365 5.95424 4 7.5Z"/>
+<path id="path7_fill" d="M 34.6198 0L 177.058 22.8225L 201.467 65.5476L 58.8944 42.0041L 34.6198 0Z"/>
+<path id="path8_fill" d="M 54.3407 49.1815L 30.0858 7.14641L 20.0758 6.12415L 44.3306 48.1595L 54.3407 49.1815Z"/>
+<path id="path9_fill" d="M 29.8801 53.2028L 40.0447 54.9147L 14.9861 14.1463L 6.46981 11.703L 29.8801 53.2028Z"/>
+<path id="path10_fill" d="M 201.467 65.5476L 58.8944 42.0041L 54.3407 49.1815L 44.3306 48.1595L 40.0447 54.9147L 29.8801 53.2028L 24.2551 62.0688L 53.1009 67.9353L 66.4939 46.8257L 199.324 68.9247L 201.467 65.5476Z"/>
+<path id="path11_fill" d="M 40.0447 54.9147L 44.3306 48.1595L 20.0758 6.12415L 14.9861 14.1463L 40.0447 54.9147Z"/>
+<path id="path12_fill" d="M 24.2551 62.0688L 29.8801 53.2028L 6.46981 11.703L 0 20.0339L 24.2551 62.0688Z"/>
+<path id="path13_fill" d="M 58.8944 42.0041L 34.6198 0L 30.0858 7.14641L 54.3407 49.1815L 58.8944 42.0041Z"/>
+</defs>
+</svg>
