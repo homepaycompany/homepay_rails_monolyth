@@ -1,5 +1,6 @@
 class PropertyImagesController < ApplicationController
   before_action :set_property_form, only: [:create]
+  skip_before_action :verify_authenticity_token, only: [:destroy] # Required for ajax request to delete picture image in property form
 
   def create
     image = PropertyImage.new()
@@ -17,9 +18,14 @@ class PropertyImagesController < ApplicationController
 
   def destroy
     @image = PropertyImage.find(params[:id])
-    @image.destroy
     @property_form = PropertyForm.find_by(token: params[:property_form_id])
-    redirect_to form_step_6_path(@property_form.token)
+    if @image.destroy
+      respond_to do |format|
+        format.html { redirect_to form_step_6_path(@property_form.token) }
+        format.js
+      end
+    else
+    end
   end
 
   private
