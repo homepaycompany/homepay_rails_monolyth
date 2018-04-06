@@ -2,6 +2,7 @@
   id="js-form-selection-box"
   data-name="<%= t[:name] %>"
   data-selected="<%= @property_form.send t[:name].to_sym %>"
+  style="background-image: url('<%= image_url(t[:icon]) %>'); background-size: cover;"
   <%= "data-reveal=js-property-form-#{t[:connected_field]}" if t[:connected_field] %>>
   <p><strong><%= t[:desc] %></strong></p>
 </div>
@@ -11,4 +12,3 @@
     <%= f.submit class:"hidden form-field-submit-button"%>
   <% end %>
 </div>
-

@@ -1,0 +1,38 @@
+<svg width="677" height="379" viewBox="0 0 677 379" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>form_attic</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-3652 -5030)">
+<g id="form_attic">
+<g id="Mask Group">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle">
+<use xlink:href="#path0_fill" transform="translate(3652 5030)" fill="#DFF7F1"/>
+</g>
+</mask>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="translate(3652 5030)" fill="#E8F7FF"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path2_fill" transform="translate(3608 5216)" fill="#DFF7F1"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path3_fill" transform="translate(3914 5324.5)" fill="#67CFB5"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path4_fill" transform="translate(3980.5 5324.5)" fill="#449E88"/>
+</g>
+<g id="Rectangle" mask="url(#mask0_alpha)">
+<use xlink:href="#path5_fill" transform="translate(3989 5238.5)" fill="#20E8B6"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 20C 0 8.95431 8.95431 0 20 0L 657 0C 668.046 0 677 8.95431 677 20L 677 359C 677 370.046 668.046 379 657 379L 20 379C 8.95431 379 0 370.046 0 359L 0 20Z"/>
+<path id="path1_fill" d="M 0 20C 0 8.95431 8.95431 0 20 0L 657 0C 668.046 0 677 8.95431 677 20L 677 326C 677 337.046 668.046 346 657 346L 20 346C 8.95431 346 0 337.046 0 326L 0 20Z"/>
+<path id="path2_fill" d="M 129.081 0L 646.907 0L 794 198L 0 198L 129.081 0Z"/>
+<path id="path3_fill" d="M 32.5 0L 132.5 0L 100 52.5L 0 52.5L 32.5 0Z"/>
+<path id="path4_fill" d="M 24.5 0L 44 0L 33.5 52.5L 0 52.5L 24.5 0Z"/>
+<path id="path5_fill" d="M 32.5 0L 57.5 86L 25 138.5L 0 52.5L 32.5 0Z"/>
+</defs>
+</svg>
