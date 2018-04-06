@@ -16,7 +16,7 @@ function newDropzone() {
     clickable: "#clickable",
     previewTemplate: document.querySelector('#tpl').innerHTML,
     addRemoveLinks: true,
-    dictCancelUpload: "Supprimer",
+    dictCancelUpload: "",
     dictRemoveFile: "Supprimer",
     dictCancelUploadConfirmation: "Êtes-vous sûr de vouloir supprimer l'image ?",
     // If the upload was successful
@@ -26,7 +26,7 @@ function newDropzone() {
         file.previewTemplate.dataset.token = response.id;
         file.previewTemplate.querySelector(".dz-remove").id = response.id;
     },
-    // When the remove button is clicked
+    // When the remove button is clicked and the upload is done
     removedfile: function(file){
       // Grab id of uploaded property picture
       var id = file.previewTemplate.querySelector(".dz-remove").id;
@@ -42,8 +42,6 @@ function newDropzone() {
           // Delete property image  preview
           var preview = document.querySelector(`.dz-preview[data-token="${id}"]`);
           preview.parentNode.removeChild(preview);
-          console.log("In Ajax request");
-          console.log("Removed file");
         }
       });
     },

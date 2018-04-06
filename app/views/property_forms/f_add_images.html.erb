@@ -17,10 +17,11 @@
             <div class="col-xs-12">
               <div class="dropzone-preview-container">
                 <% @property_form.property_images.each do |i| %>
-                  <div class="dropzone-image-card" id="js-dropzone-uploaded">
+                  <div class="dropzone-image-card text-center" id="js-dropzone-uploaded">
                     <%= link_to property_image_path(i.id, {property_form_id: params[:token]}), method: :delete do %>
                       <%= cl_image_tag i.photo, width: 120, height: 120 ,class:'dropzone-image' %>
-                      <i class="far fa-times-circle"></i>
+                      <div class="dz-remove">Supprimer</div>
+                      <!-- <i class="far fa-times-circle"></i> -->
                     <% end %>
                   </div>
                 <% end %>

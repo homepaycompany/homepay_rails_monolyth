@@ -8,23 +8,15 @@
   height: 120px;
   width: 120px;
   position: relative;
-  img, i {
+  img {
     transition: all ease 0.4s;
-  }
-  i {
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    opacity: 0;
-    color: $green;
-    font-size: 40px;
   }
   &:hover {
     img {
       opacity: 0.6;
     }
-    i {
-      opacity: 1;
+    .dz-remove {
+      color: $green !important;
     }
   }
 }
@@ -40,4 +32,17 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.dz-remove {
+  color:$black !important;
+  font-size: 16px;
+  transition: all ease 0.3s;
+  &:hover {
+    color: $green;
+  }
+}
+
+.dz-details img {
+  max-width: 100% !important;
 }
