@@ -14,8 +14,38 @@ function newDropzone() {
   const myDropzone = new Dropzone("#doc-dropzone", {
     dictDefaultMessage: "",
     clickable: "#clickable",
-    previewTemplate: document.querySelector('#tpl').innerHTML
-    });
+    previewTemplate: document.querySelector('#tpl').innerHTML,
+    addRemoveLinks: true,
+    dictCancelUpload: "",
+    dictRemoveFile: "Supprimer",
+    dictCancelUploadConfirmation: "Êtes-vous sûr de vouloir supprimer l'image ?",
+    // If the upload was successful
+    success: function(file, response){
+        // Find the preview and the remove button link of the uploaded file and give it an id
+        // based of the fileID response from the server
+        file.previewTemplate.dataset.token = response.id;
+        file.previewTemplate.querySelector(".dz-remove").id = response.id;
+    },
+    // When the remove button is clicked and the upload is done
+    removedfile: function(file){
+      // Grab id of uploaded property picture
+      var id = file.previewTemplate.querySelector(".dz-remove").id;
+      var formToken = document.querySelector('.form-container').dataset.token;
+
+      // Ajax request to delete the file
+      $.ajax({
+        type: 'DELETE',
+        url: '/property_images/' + id,
+        data: {property_form_id: formToken},
+        dataType: "script",
+        success: function(file){
+          // Delete property image  preview
+          var preview = document.querySelector(`.dz-preview[data-token="${id}"]`);
+          preview.parentNode.removeChild(preview);
+        }
+      });
+    },
+  });
 
   // code found on internet to prevent issues with SAFARI and IE browsers
   myDropzone.handleFiles = function(files) {
@@ -47,7 +77,6 @@ function enableNextSection () {
   b.innerHTML = "Continuer"
   // b.classList.remove('js-block-next-section');
   // b.classList.remove('disabled');
-
 }
 
 export { launchDropzone }
