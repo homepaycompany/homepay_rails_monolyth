@@ -2,11 +2,11 @@
   <div class="row">
     <% fields.each do |t| %>
       <% if fields.length.odd? %>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-12 col-sm-4">
           <%= render 'property_forms/form_fields/selection_box_field', t: t %>
         </div>
       <% else %>
-        <div class="col-xs-6">
+        <div class="col-xs-12">
           <%= render 'property_forms/form_fields/selection_box_field', t: t %>
         </div>
       <% end %>
